@@ -11,6 +11,7 @@ flagged so it can be moved into per-character config later.
 | [PIPELINE.md](PIPELINE.md) | The end-to-end process, stage by stage, with inputs/outputs and automation level |
 | [PITFALLS.md](PITFALLS.md) | Every known caveat: symptom → cause → fix. **Read before each stage.** |
 | [STATUS.md](STATUS.md) | What's automated, manual, or not implemented yet; open questions |
+| [FE-1_PAC_READER.md](FE-1_PAC_READER.md) | Design notes: reading `.pac` files directly (planned) |
 | [RECOVERY.md](RECOVERY.md) | The Oct 2026 publish data-loss incident and how the mod was restored |
 | [SOURCES.md](SOURCES.md) | Links to official docs and tools, grouped by topic |
 

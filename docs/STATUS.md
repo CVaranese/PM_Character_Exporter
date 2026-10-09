@@ -50,6 +50,8 @@ Last updated 2026-10-09.
 ## Future enhancements
 
 ### FE-1 — Read Brawl/P+ `.pac` files directly (replace Rukai Data copy/paste)  ⏳ planned
+Full design notes (phases, JSON sketch, pipeline changes, tests): [FE-1_PAC_READER.md](FE-1_PAC_READER.md).
+
 **Why:** Stage 1 and 4 inputs are copied by hand from Rukai Data pages, and some data the site *draws* is
 never *printed*, e.g. the ledge-grab box (see P-MOVE-11). Reading the `.pac` files ourselves gets every value
 for every subaction in one run.
