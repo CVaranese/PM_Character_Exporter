@@ -50,6 +50,14 @@ found; don't delete fixed ones, mark them **Fixed** so the history stays.
   `shield_mesh` at the copy. Afterwards no mod file references the shield MIs/MATs/MF/texture (verified on
   disk). **The shield looks wrong** (body material), which is accepted until the devs' fix. To undo, set
   `shield_mesh` back to `/Game/Characters/Shared/Shield/SK_Cha_Shield` and delete `UnrealAssets/Shield/`.
+- **v1 still crashed (2026-10-09):** the mesh copy kept the original `SK_VFX_Shield_skeleton` and `PH_Cha_Shield`.
+  Both have a **preview-mesh link back to `SK_Cha_Shield`**, so publish followed them and pulled the whole chain
+  back in. Lesson: when isolating an asset, check for *any* reference into the folder (preview meshes, skeletons,
+  physics assets), not just the materials.
+- **v2:** the script also duplicates the skeleton (`SK_<Code>_Shield_Skeleton`, preview mesh = our copy) and
+  removes the mesh copy's physics asset. `SkeletalMesh.skeleton` is **read-only from Python**, so the swap is a
+  manual step: right-click mesh copy → Assign Skeleton → the skeleton copy → Save All. After that, 0 mod files
+  reference `/Game/Characters/Shared/Shield/`. Backup `d20ef1c`. Publish result: pending.
 - **Status:** Crash verified 2026-10-09 (second occurrence).
 
 <a id="p-ue-1"></a>
