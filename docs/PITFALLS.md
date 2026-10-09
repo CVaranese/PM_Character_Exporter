@@ -44,7 +44,7 @@ found; don't delete fixed ones, mark them **Fixed** so the history stays.
 - **Recovery:** this time `Saved/ModPublishBackup` was complete (413 files). Restore from it or from the
   `rivals-2-falcon` backup repo, and delete `PublishedAssets/`.
 - **Fix:** devs are working on it (2026-10-09).
-- **Local workaround (applied to Falcon 2026-10-09, publish not yet tested):** `Unreal_Scripts/local_shield_fix.py`
+- **Local workaround (applied to Falcon 2026-10-09; works with v2 below):** `Unreal_Scripts/local_shield_fix.py`
   copies `SK_Cha_Shield` to `UnrealAssets/Shield/SK_<Code>_Shield`, sets its 4 material slots (Glass, Stun,
   Element, Glow; these are the entire broken chain) to the mod's own `MI_<Code>_Body`, and points the skin's
   `shield_mesh` at the copy. Afterwards no mod file references the shield MIs/MATs/MF/texture (verified on
@@ -57,7 +57,7 @@ found; don't delete fixed ones, mark them **Fixed** so the history stays.
 - **v2:** the script also duplicates the skeleton (`SK_<Code>_Shield_Skeleton`, preview mesh = our copy) and
   removes the mesh copy's physics asset. `SkeletalMesh.skeleton` is **read-only from Python**, so the swap is a
   manual step: right-click mesh copy → Assign Skeleton → the skeleton copy → Save All. After that, 0 mod files
-  reference `/Game/Characters/Shared/Shield/`. Backup `d20ef1c`. Publish result: pending.
+  reference `/Game/Characters/Shared/Shield/`. Backup `d20ef1c`. **Publish succeeded 2026-10-09** (no assert; kit restored UnrealAssets, 415 files). Post-publish backup `85476bf`.
 - **Status:** Crash verified 2026-10-09 (second occurrence).
 
 <a id="p-ue-1"></a>
