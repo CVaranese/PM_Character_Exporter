@@ -6,8 +6,12 @@ T_Cha_ShieldOffset_M). The mod only reaches them through the skin's shield_mesh 
   1. duplicates SK_Cha_Shield into the mod (UnrealAssets/Shield/SK_<Code>_Shield),
   2. replaces every material slot on the copy with a material the mod already uses (default: MI_<Code>_Body),
      so the shield chain is no longer referenced. The shield will look like the body material,
-  3. points the skin's shield_mesh at the copy.
-Then it lists the copy's dependencies so we can confirm no shield materials remain.
+  3. duplicates the shield skeleton too, points the copy's preview mesh at our mesh copy, and switches the mesh
+     copy to it. The original skeleton (and PH_Cha_Shield) keep a preview-mesh link back to SK_Cha_Shield,
+     which made the publish pull the whole chain back in (second crash, 2026-10-09),
+  4. removes the physics asset from the mesh copy (PH_Cha_Shield's preview link can't be edited from Python),
+  5. points the skin's shield_mesh at the copy.
+Verify afterwards on disk that nothing in the mod references /Game/Characters/Shared/Shield/ at all.
 
 Undo: set the skin's shield_mesh back to /Game/Characters/Shared/Shield/SK_Cha_Shield and delete UnrealAssets/Shield.
 
@@ -34,6 +38,8 @@ APPLY = os.environ.get("R2_APPLY") == "1"
 
 SRC_MESH = "/Game/Characters/Shared/Shield/SK_Cha_Shield"
 DST_MESH = f"{MOD}/Shield/SK_{CODE}_Shield"
+SRC_SKEL = "/Game/Characters/Shared/Shield/Animation/SK_VFX_Shield_skeleton"
+DST_SKEL = f"{MOD}/Shield/SK_{CODE}_Shield_Skeleton"
 REPORT = Path(__file__).resolve().parent / "local_shield_fix_report.txt"
 BAD = ("/Shield/MI_", "/Shield/MAT_", "MF_Cha_Shield", "T_Cha_ShieldOffset", "MI_Zet_DefaultShield")
 
@@ -89,9 +95,25 @@ def main():
         s.set_editor_property("material_interface", material)
         new_slots.append(s)
     mesh.set_editor_property("materials", new_slots)
-    if not eal.save_asset(DST_MESH, only_if_is_dirty=False):
-        log("ERROR: saving mesh copy failed")
+
+    skel = eal.load_asset(DST_SKEL) if eal.does_asset_exist(DST_SKEL) else eal.duplicate_asset(SRC_SKEL, DST_SKEL)
+    if skel is None:
+        log("ERROR: skeleton duplicate failed")
         return
+    skel.set_skeleton_preview_mesh(mesh)
+    skel.set_skeleton_additional_preview_meshes(None)
+    # SkeletalMesh.skeleton is read-only from Python, so the swap is a manual step in R2Kit:
+    # right-click the mesh copy > Assign Skeleton > pick the skeleton copy, then save.
+    mesh.set_editor_property("physics_asset", None)
+    current_skel = mesh.get_editor_property("skeleton").get_path_name()
+    log(f"mesh physics_asset -> {mesh.get_editor_property('physics_asset')}; skeleton is {current_skel}")
+    if not current_skel.startswith(DST_SKEL):
+        log(f"MANUAL STEP: in R2Kit right-click {DST_MESH} > Assign Skeleton > {DST_SKEL}, then Save")
+
+    for path in (DST_SKEL, DST_MESH):
+        if not eal.save_asset(path, only_if_is_dirty=False):
+            log(f"ERROR: saving {path} failed")
+            return
 
     skin.set_editor_property("shield_mesh", mesh)
     if not eal.save_asset(SKIN, only_if_is_dirty=False):
