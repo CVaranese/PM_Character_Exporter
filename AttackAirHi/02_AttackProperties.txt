@@ -1,0 +1,28 @@
+{
+	"Tagged": [
+		[
+			"Groundedness",
+			"AirOnly"
+		],
+		[
+			"LandingLagFrames",
+			"7"
+		],
+		[
+			"LandingLagAnimation",
+			"/Script/Engine.AnimSequence'/Game/ModContent/3729910023/UnrealAssets/Animation/AN_Cap_LandingAirHi.AN_Cap_LandingAirHi'"
+		],
+		[
+			"RootedType",
+			"None"
+		],
+		[
+			"BReverseType",
+			"None"
+		],
+		[
+			"EndInCrouchWhenGrounded",
+			"False"
+		]
+	]
+}

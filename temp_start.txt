@@ -1,0 +1,105 @@
+I am making another kind of attack. It is a jab combo. It is complicated, so i think i will leave this manual at this time.
+
+However, I still want the hitboxes and hitbox properties created, as that would make it easier for me. This is a one time conversion, can you help me with it? All of the move data is included below in the typical format.
+
+
+
+
+
+ATTACK INFO:
+Attack11
+22
+IntVariableSet { variable: LongtermAccessInt (0x43), value: 0 }
+AsyncWait(2.0)
+BoolVariableSetTrue { variable: RandomAccessBool(EnableActionTransition) }
+CreateHitBox(HitBoxArguments { bone_index: 0, hitbox_id: 0, set_id: 0, damage: Constant(2.0), trajectory: 80, wdsk: 20, kbg: 100, shield_damage: 0, bkb: 1, size: 3.52, x_offset: 0.0, y_offset: 10.8, z_offset: 10.61, tripping_rate: 0.0, hitlag_mult: 1.0, sdi_mult: 1.0, effect: Normal, unk1: false, sound_level: 0, unk2: false, sound: Punch, unk3: 0, ground: true, aerial: true, unk4: 0, sse_type: Hand, clang: true, unk5: true, direct: true, unk6: 0 })
+CreateHitBox(HitBoxArguments { bone_index: 0, hitbox_id: 1, set_id: 0, damage: Constant(2.0), trajectory: 80, wdsk: 20, kbg: 100, shield_damage: 0, bkb: 1, size: 3.52, x_offset: 0.0, y_offset: 12.13, z_offset: 5.3, tripping_rate: 0.0, hitlag_mult: 1.0, sdi_mult: 1.0, effect: Normal, unk1: false, sound_level: 0, unk2: false, sound: Punch, unk3: 0, ground: true, aerial: true, unk4: 0, sse_type: Hand, clang: true, unk5: true, direct: true, unk6: 0 })
+CreateHitBox(HitBoxArguments { bone_index: 0, hitbox_id: 2, set_id: 0, damage: Constant(2.0), trajectory: 80, wdsk: 20, kbg: 100, shield_damage: 0, bkb: 1, size: 2.34, x_offset: 0.0, y_offset: 10.8, z_offset: 1.89, tripping_rate: 0.0, hitlag_mult: 1.0, sdi_mult: 1.0, effect: Normal, unk1: false, sound_level: 0, unk2: false, sound: Punch, unk3: 0, ground: true, aerial: true, unk4: 0, sse_type: Hand, clang: true, unk5: true, direct: true, unk6: 0 })
+AsyncWait(5.0)
+DeleteAllHitBoxes
+AsyncWait(6.0)
+BoolVariableSetTrue { variable: RandomAccessBool (0x11) }
+AsyncWait(15.0)
+AllowInterrupts
+
+Attack12
+21
+AsyncWait(1.0)
+BoolVariableSetTrue { variable: RandomAccessBool(EnableActionTransition) }
+AsyncWait(4.0)
+CreateHitBox(HitBoxArguments { bone_index: 0, hitbox_id: 0, set_id: 0, damage: Constant(3.0), trajectory: 80, wdsk: 20, kbg: 100, shield_damage: 0, bkb: 0, size: 3.52, x_offset: 0.0, y_offset: 11.18, z_offset: 15.16, tripping_rate: 0.0, hitlag_mult: 1.0, sdi_mult: 1.0, effect: Normal, unk1: false, sound_level: 0, unk2: false, sound: Punch, unk3: 0, ground: true, aerial: true, unk4: 0, sse_type: Hand, clang: true, unk5: true, direct: true, unk6: 0 })
+CreateHitBox(HitBoxArguments { bone_index: 0, hitbox_id: 1, set_id: 0, damage: Constant(3.0), trajectory: 80, wdsk: 20, kbg: 100, shield_damage: 0, bkb: 0, size: 3.52, x_offset: 0.0, y_offset: 11.18, z_offset: 9.47, tripping_rate: 0.0, hitlag_mult: 1.0, sdi_mult: 1.0, effect: Normal, unk1: false, sound_level: 0, unk2: false, sound: Punch, unk3: 0, ground: true, aerial: true, unk4: 0, sse_type: Hand, clang: true, unk5: true, direct: true, unk6: 0 })
+CreateHitBox(HitBoxArguments { bone_index: 0, hitbox_id: 2, set_id: 0, damage: Constant(3.0), trajectory: 80, wdsk: 20, kbg: 100, shield_damage: 0, bkb: 0, size: 2.73, x_offset: 0.0, y_offset: 11.18, z_offset: 3.79, tripping_rate: 0.0, hitlag_mult: 1.0, sdi_mult: 1.0, effect: Normal, unk1: false, sound_level: 0, unk2: false, sound: Punch, unk3: 0, ground: true, aerial: true, unk4: 0, sse_type: Hand, clang: true, unk5: true, direct: true, unk6: 0 })
+AsyncWait(7.0)
+DeleteAllHitBoxes
+BoolVariableSetTrue { variable: RandomAccessBool (0x11) }
+AsyncWait(18.0)
+AllowInterrupts
+
+Attack13
+29
+AsyncWait(2.0)
+BoolVariableSetTrue { variable: RandomAccessBool(EnableActionTransition) }
+AsyncWait(5.0)
+CreateHitBox(HitBoxArguments { bone_index: 12, hitbox_id: 0, set_id: 0, damage: Constant(8.0), trajectory: 55, wdsk: 0, kbg: 100, shield_damage: 0, bkb: 20, size: 5.08, x_offset: 0.0, y_offset: 4.17, z_offset: 0.0, tripping_rate: 0.0, hitlag_mult: 1.0, sdi_mult: 1.0, effect: Normal, unk1: false, sound_level: 2, unk2: false, sound: Kick, unk3: 0, ground: true, aerial: true, unk4: 0, sse_type: Knee, clang: true, unk5: true, direct: true, unk6: 0 })
+CreateHitBox(HitBoxArguments { bone_index: 6, hitbox_id: 2, set_id: 0, damage: Constant(8.0), trajectory: 55, wdsk: 0, kbg: 100, shield_damage: 0, bkb: 20, size: 3.52, x_offset: 4.17, y_offset: 0.0, z_offset: 0.0, tripping_rate: 0.0, hitlag_mult: 1.0, sdi_mult: 1.0, effect: Normal, unk1: false, sound_level: 2, unk2: false, sound: Kick, unk3: 0, ground: true, aerial: true, unk4: 0, sse_type: Knee, clang: true, unk5: true, direct: true, unk6: 0 })
+AsyncWait(7.0)
+CreateHitBox(HitBoxArguments { bone_index: 12, hitbox_id: 0, set_id: 0, damage: Constant(6.0), trajectory: 50, wdsk: 0, kbg: 100, shield_damage: 0, bkb: 0, size: 3.91, x_offset: 0.0, y_offset: 4.17, z_offset: 0.0, tripping_rate: 0.0, hitlag_mult: 1.0, sdi_mult: 1.0, effect: Normal, unk1: false, sound_level: 1, unk2: false, sound: Kick, unk3: 0, ground: true, aerial: true, unk4: 0, sse_type: Knee, clang: true, unk5: true, direct: true, unk6: 0 })
+CreateHitBox(HitBoxArguments { bone_index: 6, hitbox_id: 2, set_id: 0, damage: Constant(6.0), trajectory: 50, wdsk: 0, kbg: 100, shield_damage: 0, bkb: 0, size: 3.13, x_offset: 4.17, y_offset: 0.0, z_offset: 0.0, tripping_rate: 0.0, hitlag_mult: 1.0, sdi_mult: 1.0, effect: Normal, unk1: false, sound_level: 1, unk2: false, sound: Kick, unk3: 0, ground: true, aerial: true, unk4: 0, sse_type: Knee, clang: true, unk5: true, direct: true, unk6: 0 })
+AsyncWait(12.0)
+DeleteAllHitBoxes
+BoolVariableSetTrue { variable: RandomAccessBool(EnableJabLoop) }
+CreateInterrupt { interrupt_id: None, action: RapidJab, requirement: ((LongtermAccessInt (0x43) LessThan scalar(23))) }
+AsyncWait(22.0)
+AllowInterrupts
+
+Attack100Start
+7
+
+Attack100
+34
+AsyncWait(2.0)
+CreateHitBox(HitBoxArguments { bone_index: 43, hitbox_id: 0, set_id: 0, damage: Constant(2.0), trajectory: 361, wdsk: 0, kbg: 50, shield_damage: 0, bkb: 0, size: 2.34, x_offset: 0.0, y_offset: 0.0, z_offset: 0.0, tripping_rate: 0.0, hitlag_mult: 1.0, sdi_mult: 1.0, effect: Normal, unk1: false, sound_level: 1, unk2: false, sound: Punch, unk3: 0, ground: true, aerial: true, unk4: 0, sse_type: Hand, clang: true, unk5: true, direct: true, unk6: 0 })
+CreateHitBox(HitBoxArguments { bone_index: 44, hitbox_id: 1, set_id: 0, damage: Constant(2.0), trajectory: 361, wdsk: 0, kbg: 50, shield_damage: 0, bkb: 0, size: 2.34, x_offset: -1.0, y_offset: 0.0, z_offset: 0.0, tripping_rate: 0.0, hitlag_mult: 1.0, sdi_mult: 1.0, effect: Normal, unk1: false, sound_level: 1, unk2: false, sound: Punch, unk3: 0, ground: true, aerial: true, unk4: 0, sse_type: Hand, clang: true, unk5: true, direct: true, unk6: 0 })
+CreateHitBox(HitBoxArguments { bone_index: 44, hitbox_id: 2, set_id: 0, damage: Constant(1.0), trajectory: 90, wdsk: 0, kbg: 20, shield_damage: 0, bkb: 0, size: 2.34, x_offset: -6.0, y_offset: 0.0, z_offset: 0.0, tripping_rate: 0.0, hitlag_mult: 1.0, sdi_mult: 1.0, effect: Normal, unk1: false, sound_level: 1, unk2: false, sound: Punch, unk3: 0, ground: true, aerial: true, unk4: 0, sse_type: Hand, clang: true, unk5: true, direct: true, unk6: 0 })
+SyncWait(2.0)
+DeleteAllHitBoxes
+BoolVariableSetTrue { variable: RandomAccessBool(EnableJabEnd) }
+AsyncWait(8.0)
+CreateHitBox(HitBoxArguments { bone_index: 43, hitbox_id: 0, set_id: 0, damage: Constant(2.0), trajectory: 361, wdsk: 0, kbg: 50, shield_damage: 0, bkb: 0, size: 2.34, x_offset: 0.0, y_offset: 0.0, z_offset: 0.0, tripping_rate: 0.0, hitlag_mult: 1.0, sdi_mult: 1.0, effect: Normal, unk1: false, sound_level: 1, unk2: false, sound: Punch, unk3: 0, ground: true, aerial: true, unk4: 0, sse_type: Hand, clang: true, unk5: true, direct: true, unk6: 0 })
+CreateHitBox(HitBoxArguments { bone_index: 44, hitbox_id: 1, set_id: 0, damage: Constant(2.0), trajectory: 361, wdsk: 0, kbg: 50, shield_damage: 0, bkb: 0, size: 2.34, x_offset: -1.0, y_offset: 0.0, z_offset: 0.0, tripping_rate: 0.0, hitlag_mult: 1.0, sdi_mult: 1.0, effect: Normal, unk1: false, sound_level: 1, unk2: false, sound: Punch, unk3: 0, ground: true, aerial: true, unk4: 0, sse_type: Hand, clang: true, unk5: true, direct: true, unk6: 0 })
+CreateHitBox(HitBoxArguments { bone_index: 44, hitbox_id: 2, set_id: 0, damage: Constant(1.0), trajectory: 90, wdsk: 0, kbg: 20, shield_damage: 0, bkb: 0, size: 2.34, x_offset: -6.0, y_offset: 0.0, z_offset: 0.0, tripping_rate: 0.0, hitlag_mult: 1.0, sdi_mult: 1.0, effect: Normal, unk1: false, sound_level: 1, unk2: false, sound: Punch, unk3: 0, ground: true, aerial: true, unk4: 0, sse_type: Hand, clang: true, unk5: true, direct: true, unk6: 0 })
+SyncWait(2.0)
+DeleteAllHitBoxes
+BoolVariableSetTrue { variable: RandomAccessBool(EnableJabEnd) }
+AsyncWait(15.0)
+CreateHitBox(HitBoxArguments { bone_index: 43, hitbox_id: 0, set_id: 0, damage: Constant(2.0), trajectory: 361, wdsk: 0, kbg: 50, shield_damage: 0, bkb: 0, size: 2.34, x_offset: 0.0, y_offset: 0.0, z_offset: 0.0, tripping_rate: 0.0, hitlag_mult: 1.0, sdi_mult: 1.0, effect: Normal, unk1: false, sound_level: 1, unk2: false, sound: Punch, unk3: 0, ground: true, aerial: true, unk4: 0, sse_type: Hand, clang: true, unk5: true, direct: true, unk6: 0 })
+CreateHitBox(HitBoxArguments { bone_index: 44, hitbox_id: 1, set_id: 0, damage: Constant(2.0), trajectory: 361, wdsk: 0, kbg: 50, shield_damage: 0, bkb: 0, size: 2.34, x_offset: -1.0, y_offset: 0.0, z_offset: 0.0, tripping_rate: 0.0, hitlag_mult: 1.0, sdi_mult: 1.0, effect: Normal, unk1: false, sound_level: 1, unk2: false, sound: Punch, unk3: 0, ground: true, aerial: true, unk4: 0, sse_type: Hand, clang: true, unk5: true, direct: true, unk6: 0 })
+CreateHitBox(HitBoxArguments { bone_index: 44, hitbox_id: 2, set_id: 0, damage: Constant(1.0), trajectory: 90, wdsk: 0, kbg: 20, shield_damage: 0, bkb: 0, size: 2.34, x_offset: -6.0, y_offset: 0.0, z_offset: 0.0, tripping_rate: 0.0, hitlag_mult: 1.0, sdi_mult: 1.0, effect: Normal, unk1: false, sound_level: 1, unk2: false, sound: Punch, unk3: 0, ground: true, aerial: true, unk4: 0, sse_type: Hand, clang: true, unk5: true, direct: true, unk6: 0 })
+SyncWait(2.0)
+DeleteAllHitBoxes
+BoolVariableSetTrue { variable: RandomAccessBool(EnableJabEnd) }
+AsyncWait(21.0)
+CreateHitBox(HitBoxArguments { bone_index: 43, hitbox_id: 0, set_id: 0, damage: Constant(2.0), trajectory: 361, wdsk: 0, kbg: 50, shield_damage: 0, bkb: 0, size: 2.34, x_offset: 0.0, y_offset: 0.0, z_offset: 0.0, tripping_rate: 0.0, hitlag_mult: 1.0, sdi_mult: 1.0, effect: Normal, unk1: false, sound_level: 1, unk2: false, sound: Punch, unk3: 0, ground: true, aerial: true, unk4: 0, sse_type: Hand, clang: true, unk5: true, direct: true, unk6: 0 })
+CreateHitBox(HitBoxArguments { bone_index: 44, hitbox_id: 1, set_id: 0, damage: Constant(2.0), trajectory: 361, wdsk: 0, kbg: 50, shield_damage: 0, bkb: 0, size: 2.34, x_offset: -1.0, y_offset: 0.0, z_offset: 0.0, tripping_rate: 0.0, hitlag_mult: 1.0, sdi_mult: 1.0, effect: Normal, unk1: false, sound_level: 1, unk2: false, sound: Punch, unk3: 0, ground: true, aerial: true, unk4: 0, sse_type: Hand, clang: true, unk5: true, direct: true, unk6: 0 })
+CreateHitBox(HitBoxArguments { bone_index: 44, hitbox_id: 2, set_id: 0, damage: Constant(1.0), trajectory: 90, wdsk: 0, kbg: 20, shield_damage: 0, bkb: 0, size: 2.34, x_offset: -6.0, y_offset: 0.0, z_offset: 0.0, tripping_rate: 0.0, hitlag_mult: 1.0, sdi_mult: 1.0, effect: Normal, unk1: false, sound_level: 1, unk2: false, sound: Punch, unk3: 0, ground: true, aerial: true, unk4: 0, sse_type: Hand, clang: true, unk5: true, direct: true, unk6: 0 })
+SyncWait(2.0)
+DeleteAllHitBoxes
+BoolVariableSetTrue { variable: RandomAccessBool(EnableJabEnd) }
+AsyncWait(27.0)
+CreateHitBox(HitBoxArguments { bone_index: 43, hitbox_id: 0, set_id: 0, damage: Constant(2.0), trajectory: 361, wdsk: 0, kbg: 50, shield_damage: 0, bkb: 0, size: 2.34, x_offset: 0.0, y_offset: 0.0, z_offset: 0.0, tripping_rate: 0.0, hitlag_mult: 1.0, sdi_mult: 1.0, effect: Normal, unk1: false, sound_level: 1, unk2: false, sound: Punch, unk3: 0, ground: true, aerial: true, unk4: 0, sse_type: Hand, clang: true, unk5: true, direct: true, unk6: 0 })
+CreateHitBox(HitBoxArguments { bone_index: 44, hitbox_id: 1, set_id: 0, damage: Constant(2.0), trajectory: 361, wdsk: 0, kbg: 50, shield_damage: 0, bkb: 0, size: 2.34, x_offset: -1.0, y_offset: 0.0, z_offset: 0.0, tripping_rate: 0.0, hitlag_mult: 1.0, sdi_mult: 1.0, effect: Normal, unk1: false, sound_level: 1, unk2: false, sound: Punch, unk3: 0, ground: true, aerial: true, unk4: 0, sse_type: Hand, clang: true, unk5: true, direct: true, unk6: 0 })
+CreateHitBox(HitBoxArguments { bone_index: 44, hitbox_id: 2, set_id: 0, damage: Constant(1.0), trajectory: 90, wdsk: 0, kbg: 20, shield_damage: 0, bkb: 0, size: 2.34, x_offset: -6.0, y_offset: 0.0, z_offset: 0.0, tripping_rate: 0.0, hitlag_mult: 1.0, sdi_mult: 1.0, effect: Normal, unk1: false, sound_level: 1, unk2: false, sound: Punch, unk3: 0, ground: true, aerial: true, unk4: 0, sse_type: Hand, clang: true, unk5: true, direct: true, unk6: 0 })
+SyncWait(2.0)
+DeleteAllHitBoxes
+BoolVariableSetTrue { variable: RandomAccessBool(EnableJabEnd) }
+UnknownEvent { namespace: 0x1, code: 0x0, unk1: 0x0, arguments: [] }
+UnknownEvent { namespace: 0x0, code: 0x3, unk1: 0x0, arguments: [] }
+BoolVariableSetTrue { variable: RandomAccessBool(EnableJabEnd) }
+Goto(Attack100 Main 0x117d8)
+
+AttackEnd
+15
+DeleteAllHitBoxes
+AsyncWait(9.0)
+AllowInterrupts

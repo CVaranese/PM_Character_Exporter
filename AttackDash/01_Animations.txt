@@ -1,0 +1,16 @@
+{
+	"Tagged": [
+		[
+			"AttackName",
+			""
+		],
+		[
+			"GroundedAnimation",
+			"/Script/Engine.AnimSequence'/Game/ModContent/3729910023/UnrealAssets/Animation/AN_Cap_AttackDash.AN_Cap_AttackDash'"
+		],
+		[
+			"AerialAnimation",
+			"None"
+		]
+	]
+}

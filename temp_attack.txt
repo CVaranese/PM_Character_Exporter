@@ -1,0 +1,10 @@
+CatchTurn
+36
+AsyncWait(10.0)
+CreateGrabBox(GrabBoxArguments { hitbox_id: 0, bone_index: 0, size: 3.91, x_offset: 0.0, y_offset: 9.85, z_offset: -11.0, set_action: 61, target: AerialAndGrounded, unk: None })
+CreateGrabBox(GrabBoxArguments { hitbox_id: 1, bone_index: 0, size: 3.91, x_offset: 0.0, y_offset: 9.85, z_offset: -6.2, set_action: 61, target: AerialAndGrounded, unk: None })
+CreateGrabBox(GrabBoxArguments { hitbox_id: 2, bone_index: 0, size: 3.91, x_offset: 0.0, y_offset: 9.85, z_offset: -2.2, set_action: 61, target: AerialAndGrounded, unk: None })
+Subroutine(External: gameAnimCmd_CaptureCutCommon)
+SyncWait(2.0)
+DeleteAllGrabBoxes
+BoolVariableSetTrue { variable: RandomAccessBool(EnableActionTransition) }

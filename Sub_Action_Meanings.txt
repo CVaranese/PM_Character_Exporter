@@ -1,0 +1,311 @@
+Wait1: Idle.
+Wait2/Wait3/Wait4/Wait5: Alternative Idle Animations (only certain characters have Wait4 and Wait5).
+WaitItem: Idle when holding certain items.
+WalkSlow: Slow walking.
+WalkMiddle: Medium walking.
+WalkFast: Fast walking.
+WalkBrake/WalkBrakeL (Sm4sh)/WalkBrakeR (Sm4sh): Stopping from a walk. L = Left, R = Right.
+Dash: Dashing.
+Run: Running.
+RunBrake/RunBrakeL (Sm4sh)/RunBrakeR (Sm4sh): Stopping from running. L = Left, R = Right.
+Turn: Turning while Idle or Walking.
+TurnRun: Turning while Running.
+TurnRunBrake: Stopping while turning while running.
+JumpSquat: Jump startup.
+JumpF: Jumping forward. There's two Sub Actions for this. The first is for a full jump, while the second is for a short hop.
+JumpB: Jumping backward. There's two Sub Actions for this. The first is for a full jump, while the second is for a short hop.
+JumpAerialF: Air jumping forward.
+JumpAerialB: Air jumping backward.
+JumpAerialF2/JumpAerialF3/JumpAerialF4/JumpAerialF5: Multijump [only certain characters have this: Charizard, Meta Knight, Kirby, King Dedede, Pit, Dark Pit (Sm4sh only), and Jigglypuff].
+Fall: Falling after a jump.
+FallF: Falling forward after a jump.
+FallB: Falling bakward after a jump.
+FallAerial: Falling after an air jump.
+FallAerialF: Falling forward after an air jump.
+FallAerialB: Falling backward after an air jump.
+FallSpecial: Freefalling.
+FallSpecialF: Freefalling forward.
+FallSpecialB: Freefalling backward.
+RunFall/RunFallL/RunFallR (Sm4sh only): Running off the edge of a stage. L = Left, R = Right.
+WalkFall/WalkFallL/WalkFallR (Sm4sh only): Walking off the edge of a stage. L = Left, R = Right.
+DamageFall: Tumble.
+Squat: Crouching.
+SquatWait: Crouch Idle.
+SquatWaitItem: Crouch Idle when holding certain items.
+SquatF: Crawling forward.
+SquatB: Crawling backward.
+SquatRv: Getting up from a Crouch.
+LandingLight: Soft landing.
+LangingHeavy: Hard landing.
+LandingFallSpecial: Landing from freefall.
+StepJump: Footstooling JumpSquat.
+StepPose: Getting Footstooled on the ground.
+StepBack: Recovery after getting Footstooled on the ground.
+StepAirPose: Getting Footstooled in the air.
+StepFall: Falling after getting Footstooled in the air.
+GuardOn: Bringing up shield.
+Guard: Holding shield.
+GuardOff: Bringing down shield.
+GuardDamage: Taking shield damage.
+EscapeN: Spot dodge.
+EscapeF: Forward roll.
+EscapeB: Backward roll.
+EscapeAir: Air dodge.
+Rebound: Action characters go into after their attacks clang on the ground.
+Attack11: Jab.
+Attack12: Jab 2.
+Attack13: Jab 3.
+Attack100Start: Rapid Jab Startup
+Attack100: Rapid Jab
+AttackEnd: Rapid Jab End
+AttackDash: Dash Attack.
+AttackS3Hi: Side Tilt (angled up).
+AttackS3S: Side Tilt.
+AttackS3Lw: Side Tilt (angled down).
+AttackS3S2: Second part of Side Tilt. Examples include Snake (Brawl only), Meta Knight, and Bayonetta (Sm4sh only).
+AttackS3S3: Third part of Side Tilt. Examples include Meta Knight and Bayonetta (Sm4sh only).
+AttackHi3: Up Tilt.
+AttackLw3: Down Tilt.
+AttackS4Start (Brawl only): Side Smash Startup.
+AttackS4Hold (Brawl)/AttackS4Charge (Sm4sh): Side Smash Charge.
+AttackS4Hi: Side Smash (angled up).
+AttackS4S: Side Smash.
+AttackS4Lw: Side Smash (angled down).
+AttackS4S2: Second part of Side Smash. Only certain characters have this with examples being Link, Toon Link, and Young Link (Melee only).
+AttackHi4Start (Brawl only): Up Smash Startup.
+AttachHi4Hold (Brawl)/AttackHi4Charge (Sm4sh): Up Smash Charge.
+AttackHi4: Up Smash.
+AttackLw4Start (Brawl only): Down Smash Startup.
+AttackLw4Hold (Brawl)/AttackLw4Charge (Sm4sh): Down Smash Charge.
+AttackLw4: Down Smash.
+AttackAirN: Neutral Air.
+AttackAirF: Forward Air.
+AttackAirF2: Second part of Forward Air. Only seen use with Bayonetta (Sm4sh only).
+AttackAirF3: Third part of Forward Air. Only seen use with Bayonetta (Sm4sh only).
+AttackAirB: Back Air.
+AttackAirHi: Up Air.
+AttackAirLw: Down Air.
+LandingAirN: Neutral Air Landing
+LandingAirF: Forward Air Landing
+LandingAirF2: Second Forward Air Landing. Only seen use with Bayonetta (Sm4sh only).
+LandingAirF3: Thrid Forward Air Landing. Only seen use with Bayonetta (Sm4sh only).
+LandingAirB: Back Air Landing
+LandingAirHi: Up Air Landing
+LandingAirLw: Down Air Landing
+Catch: Standing Grab.
+CatchDash: Running Grab.
+CatchTurn: Pivot Grab.
+CatchWait: Holding a victim in a grab.
+CatchAttack: Attacking a grabbed vicitm.
+CatchCut: Grab Release on the grabber's end.
+CaptureCut: Grab Release on the victim's end.
+CaptureJump: Grab victim jumping from a grab release.
+ThrowF: Forward Throw.
+ThrowB: Back Throw.
+ThrowHi: Up Throw.
+ThrowLw: Down Throw.
+ThrownF: Getting thrown by Forward Throw.
+ThrownB: Getting thrown by Back Throw.
+ThrownHi: Getting thrown by Up Throw.
+ThrownLw: Getting thrown by Down Throw.
+ThrownDxF: Getting thrown by Forward Throw. Applies to characters like Kirby, Jigglypuff, and Meta Knight.
+ThrownDxB: Getting thrown by Back Throw. Applies to characters like Kirby, Jigglypuff, and Meta Knight.
+ThrownDxHi: Getting thrown by Up Throw. Applies to characters like Kirby, Jigglypuff, and Meta Knight.
+ThrownDxLw: Getting thrown by Down Throw. Applies to characters like Kirby, Jigglypuff, and Meta Knight.
+CapturePulledHi: Getting caught by a high grab.
+CaptureWaitHi: Being held by a high grab.
+CaptureDamageHi: Being struck by a high grab attack.
+CapturePulledLw: Getting caught by a low grab.
+CaptureWaitLw: Being held by a low grab.
+CaptureDamageLw: Being struck by a high low attack.
+DamageHi1/DamageHi2/DamageHi3: Being hit by a high hitting attack.
+DamageN1/DamageN2/DamageN3: Being hit by a mid hitting attack.
+DamageLw1/DamageLw2/DamageLw3: Being hit by a low hitting attack.
+DamageAir1/DamageAir2/DamageAir3: Being hit by an attack in the air.
+DamageFlyHi: Sent flying by a high hitting attack.
+DamageFlyN: Sent flying by a mid hitting attack.
+DamageFlyLw: Sent flying by a low hitting attack.
+DamageFlyTop: Sent flying under certain circumstances. Usually seen from shield break.
+DamageFlyRoll: Sent flying under certain circumstances. Usually seen from being meteored or bursting out of a barrel.
+DamageElec: Being hit by an electric attack.
+DownBoundU/DownBoundD: Hitting the ground during tumble. U=Facing upward. D=Facing downward.
+DownWaitU/DownWaitD: Downed Idle. U=Facing upward. D=Facing downward.
+DownDamageU/DownDamageD: Being hit while downed. U=Facing upward. D=Facing downward.
+DownDamageU3/DownDamageD3: Being hit by a stronger attack while downed. U=Facing upward. D=Facing downward.
+DownEatU/DownEatD: Eating a food item while downed. U=Facing upward. D=Facing downward.
+DownStandU/DownStandD: Standing up from being downed. U=Facing upward. D=Facing downward.
+DownAttackU/DownAttackD: Getting up while attacking from being downed. U=Facing upward. D=Facing downward.
+DownForwardU/DownForwardD: Getting up while escaping forward from being downed. U=Facing upward. D=Facing downward.
+DownBackU/DownBackD: Getting up while escaping backward from being downed. U=Facing upward. D=Facing downward.
+DownSpotU/DownSpotD: This Action ocurrs when HP reaches 0 in Stamina mode when hit by a weaker attack. Ends in the downed state, but cannot be acted out of.
+Passive: Teching.
+PassiveStandF: Teching forward.
+PassiveStandB: Teching backward.
+PassiveWall: Teching off a wall.
+PassiveWallJump: Jump Teching off a wall. Also used for standard Wall Jumping.
+PassiveCeil: Teching off a ceiling.
+FuraFura: Stunned. Used during shield break or when struck by a Deku Nut.
+FuraFuraStartU:FuraFuraStartD: Getting up after a shield break. Transisions into FuraFura. U=Facing upward. D=Facing downward.
+FuraFuraEnd: Recovering from being stunned.
+FuraSleepStart: Going to sleep.
+FuraSleepLoop: Sleeping.
+FuraSleepEnd: Waking up.
+Swallowed: Being swallowed by Kirby and King Dedede's Inhale Specials.
+Pass: Dropping through a passable platform from the ground.
+Ottotto: Startup for ledge teetering.
+OttottoWait: Teetering over a ledge.
+WallDamage: Hitting a wall during damage.
+StopCeil: Hitting a ceiling. There's two Sub Actions for this. The first is when hitting a ceiling during damage, and the second is when jumping into a ceiling.
+StopWall: Running into a wall.
+CameraHit (Sm4sh only): Hitting the camera lens.
+MissFoot: Being pushed off a ledge while shielding.
+CliffCatch: Grabbing a ledge.
+CliffWait: Holding onto a ledge.
+CliffAttackQuick: Getting up from a ledge while attacking.
+CliffClimbQuick: Getting up from a ledge.
+CliffEscapeQuick: Getting up from a ledge while rolling.
+CliffJumpQuick1: Getting up from a ledge while preparing to jump.
+CliffJumpQuick2: Jumping after getting up from a ledge.
+CliffAttackSlow (Brawl only): Getting up from a ledge while attacking with over 100 damage taken.
+CliffClimbSlow (Brawl only): Getting up from a ledge with over 100 damage taken.
+CliffEscapeSlow (Brawl only): Getting up from a ledge while rolling with over 100 damage taken.
+CliffJumpSlow1 (Brawl only): Getting up from a ledge while preparing to jump with over 100 damage taken.
+CliffJumpSlow2 (Brawl only): Jumping after getting up from a ledge with over 100 damage taken.
+SlipDown: Tripping while in a tripping state.
+Slip: Tripping.
+SlipTurn (Brawl only): Tripping while turning.
+SlipDash (Brawl only): Tripping while Dashing.
+SlipWait: Trip Idle.
+SlipStand: Getting up after tripping.
+SlipAttack: Attacking while getting up after tripping.
+SlipEscapeF: Rolling forward while getting up after tripping.
+SlipEscapeB: Rolling backward while getting up after tripping.
+AirCatch: Tether. There's two Sub Actions for this. The first is for attempting to tether, while the second seems to be unused.
+AirCatchPose: Hanging via tether.
+AirCatchHit: Landing a tether.
+SwimRise: Swimming upward.
+SwimUp: Breaching the water's surface.
+SwimUpDamage: Breaching the water's surface while taking damage.
+Swim: Swimming idle.
+SwimF: Swimming forward.
+SwimEnd: Stopping from swimming.
+SwimTurn: Turning while swimming.
+SwimDrown: Struggling to stay afloat.
+SwimDrownOut: Drowning. This action cannot be acted out of and will end when the player reaches the blast zone.
+LightGet: Picking up an item.
+LightWalkGet: Picking up an item while walking.
+LightEat: Consuming a food item.
+LightWalkEat: Consuming a food item while walking.
+HeavyGet: Picking up a heavy item. Examples include Crates, Barrels, and Party Balls.
+HeavyWalk1 (Brawl only): First step of walking with a heavy item.
+HeavyWalk2 (Brawl only): Second step of walking with a heavy item.
+HeavyWalk (Sm4sh only): Walking with a heavy item.
+LightThrowDrop: Tossing an item away.
+LightThrowF: Throwing an item forward. There's two Sub Actions for this. The first is for light throwing, and the second is for heavy throwing.
+LightThrowB: Throwing an item backward. There's two Sub Actions for this. The first is for light throwing, and the second is for heavy throwing.
+LightThrowHi: Throwing an item upward. There's two Sub Actions for this. The first is for light throwing, and the second is for heavy throwing.
+LightThrowLw: Throwing an item downward. There's two Sub Actions for this. The first is for light throwing, and the second is for heavy throwing.
+LightThrowDash: Throwing an item while dashing or running.
+LightThrowAirF: Throwing an item forward while in the air. There's two Sub Actions for this. The first is for light throwing, and the second is for heavy throwing.
+LightThrowAirB: Throwing an item backward while in the air. There's two Sub Actions for this. The first is for light throwing, and the second is for heavy throwing.
+LightThrowAirHi: Throwing an item upward while in the air. There's two Sub Actions for this. The first is for light throwing, and the second is for heavy throwing.
+LightThrowAirLw: Throwing an item downward while in the air. There's two Sub Actions for this. The first is for light throwing, and the second is for heavy throwing.
+HeavyThrowF: Throwing a heavy item forward. There's two Sub Actions for this. The first is for light throwing, and the second is for heavy throwing.
+HeavyThrowB: Throwing a heavy item backward. There's two Sub Actions for this. The first is for light throwing, and the second is for heavy throwing.
+HeavyThrowHi: Throwing a heavy item upward. There's two Sub Actions for this. The first is for light throwing, and the second is for heavy throwing.
+HeavyThrowLw: Throwing a heavy item downward. There's two Sub Actions for this. The first is for light throwing, and the second is for heavy throwing.
+SmashThrowF (Brawl only): Throwing a Trophy Stand forward.
+SmashThrowB (Brawl only): Throwing a Trophy Stand backward.
+SmashThrowHi (Brawl only): Throwing a Trophy Stand upward.
+SmashThrowLw (Brawl only): Throwing a Trophy Stand downward.
+SmashThrowDash (Brawl only): Throwing a Trophy Stand while dashing or running.
+SmashThrowAirF (Brawl only): Throwing a Trophy Stand forward while in the air.
+SmashThrowAirB (Brawl only): Throwing a Trophy Stand backward while in the air.
+SmashThrowAirHi (Brawl only): Throwing a Trophy Stand upward while in the air.
+SmashThrowAirLw (Brawl only): Throwing a Trophy Stand downward while in the air.
+Swing1: Battering Item Jab. There are individual Sub Actions for each battering item.
+Swing3: Battering Item Tilt. There are individual Sub Actions for each battering item.
+Swing4Start (Brawl only): Battering Item Smash Start. There are individual Sub Actions for each battering item.
+Swing4: Battering Item Smash. There are individual Sub Actions for each battering item.
+Swing42: Second part of Battering Item Smash. Only Captain Falcon is known to use this. There are individual Sub Actions for each battering item.
+Swing4Hold (Brawl)/Swing4Charge (Sm4sh): Battering Item Smash Charge. There are individual Sub Actions for each battering item.
+Swing4Bat: Swinging the Homerun Bat.
+SwingDash: Battering Item Dash Attack. There are individual Sub Actions for each battering item.
+ItemHammerWait: Swinging a Hammer item in place.
+ItemHammerMove: Swinging a Hammer item while walking.
+ItemHammerAir: Swinging a Hammer item while in the air.
+ItemDragoonGet: Jumping onto the Dragoon after getting all 3 pieces.
+ItemDragoonRide: Riding on the Dragoon. Brawl only: There's also a second Sub Action for when riding a Warpstar. Sm4sh only: The same Sub Action is shared for both the Dragoon and the Warpstar.
+ItemScrew: Jumping while having the Screw Attack equipped.
+ItemScrewFall: Falling after jumping with the Screw Attack.
+ItemBig: Getting a Mushroom.
+ItemSmall: Getting a Poison Mushroom or getting struck by the Lightning item.
+ItemLegsWait: Idle while holding a gun item.
+ItemLegsSlowF: Slow walk forward while using a gun item.
+ItemLegsSlowB: Slow walk backward while using a gun item.
+ItemLegsMiddleF: Medium walk forward while using a gun item.
+ItemLegsMiddleB: Medium walk backward while using a gun item.
+ItemLegsFastF: Fast walk forward while using a gun item.
+ItemLegsFastB: Fast walk backward while using a gun item.
+ItemLegsBrakeF: Braking forward while using a gun item.
+ItemLegsBrakeB: Braking backward while using a gun item.
+ItemLegsDashF: Dashing forward while using a gun item.
+ItemLegsDashB: Dashing backward while using a gun item.
+ItemLegsLanding: Landing while using a gun item.
+ItemShoot: Using a gun item.
+ItemShootAir: Using a gun item in the air.
+ItemScopeStart: Super Scope startup.
+ItemAirScopeStart: Aerial Super Scope startup.
+ItemScopeRapid: Rapid firing Super Scope.
+ItemAirScopeRapid: Aerial rapid firing Super Scope.
+ItemScopeFire: Firing a charged Super Scope shot.
+ItemAirScopeFire: Firing a charged Super Scope shot in the air.
+ItemScopeEnd: Super Scope rapid fire end.
+ItemAirScopeEnd: Aerial Super Scope rapid fire end.
+ItemLauncher (Brawl only): Holding the Cracker Launcher.
+ItemLauncherAir (Brawl only): Holding the Cracker Launcher in the air.
+ItemLauncherFire (Brawl only): Firing the Cracker Launcher.
+ItemLauncherAirFire (Brawl only): Firing the Cracker Launcher in the air.
+ItemLauncherFall (Brawl only): Falling while holding the Cracker Launcher.
+ItemAssist: Using an Assist Trophy.
+ItemGrassPull (Sm4sh only): Using the Grass item.
+GekikaraWait: Idle after consuming the Superspicy Curry.
+ItemGenesisStart (Sm4sh only): Holding the Daybreak.
+ItemGenesisFall (Sm4sh only): Falling while holding the Daybreak.
+ItemGenesisFire (Sm4sh only): Startup for firing the Daybreak.
+ItemGenesisAirFire (Sm4sh only): Aerial startup for firing the Daybreak.
+ItemGenesisLoop (Sm4sh only): Firing the Daybreak.
+ItemGenesisAirLoop (Sm4sh only): Firing the Daybreak in the air.
+ItemGenesisEnd (Sm4sh only): Daybreak ending.
+ItemGenesisAirEnd (Sm4sh only): Aerial Daybreak ending.
+LadderWait: Holding onto a ladder.
+LadderUp: Climbing up a ladder.
+LadderDown: Climbing down a Ladder.
+LadderCatchL/LadderCatchR: Getting onto a ladder from the ground. L = Left, R = Right.
+LadderCatchAirL/LadderCatchAirR: Getting onto a ladder in the air. L = Left, R = Right.
+LadderCatchEndL/LadderCatchEndR: Climbing onto a surface from a ladder. L = Left, R = Right.
+AppealHi: Up Taunt. There's two Sub Actions for this. The first is when facing right, and the second is when facing left. Alternatively, these Sub Actions are sometimes named AppealHiR and ApplealHiL, usually if the taunt is made to face the screen.
+AppealS: Side Taunt. There's two Sub Actions for this. The first is when facing right, and the second is when facing left. Alternatively, these Sub Actions are sometimes named AppealSR and ApplealSL, usually if the taunt is made to face the screen.
+AppealLw: Down Taunt. There's two Sub Actions for this. The first is when facing right, and the second is when facing left. Alternatively, these Sub Actions are sometimes named AppealLwR and ApplealLwL, usually if the taunt is made to face the screen.
+Entry: Entering a battle in VS Mode. There's two Sub Actions for this. The first is when facing right, and the second is when facing left. Alternatively, these Sub Actions are sometimes named EntryR and EntryL, usually if the entrance is made to face the screen.
+Win1/Win2/Win3: Results Screen Victory.
+Win1Wait/Win2Wait/Win3Wait: Results Screen Victory Idle.
+Lose: Results Screen failure.
+SpecialN*: Neutral Special.
+SpecialN*_C2/SpecialN*_C3 (Sm4sh only): Custom Neutral Special.
+SpecialAirN*: Aerial Neutral Special.
+SpecialAirN*_C2/SpecialAirN*_C3 (Sm4sh only): Aerial Custom Neutral Special.
+SpecialS*: Side Special.
+SpecialS*_C2/SpecialS*_C3 (Sm4sh only): Custom Side Special.
+SpecialAirS*: Aerial Side Special.
+SpecialAirS*_C2/SpecialAirS*_C3 (Sm4sh only): Aerial Custom Side Special.
+SpecialHi*: Up Special.
+SpecialHi*_C2/SpecialHi*_C3 (Sm4sh only): Custom Up Special.
+SpecialAirHi*: Aerial Up Special.
+SpecialAirHi*_C2/SpecialAirHi*_C3 (Sm4sh only): Aerial Custom Up Special.
+SpecialLw*: Down Special.
+SpecialLw*_C2/SpecialLw*_C3 (Sm4sh only): Custom Down Special.
+SpecialAirLw*: Aerial Down Special.
+SpecialAirLw*_C2/SpecialAirLw*_C3 (Sm4sh only): Aerial Custom Down Special.
+Final*: Final Smash.
+FinalAir*: Aerial Final Smash.

@@ -1,0 +1,28 @@
+{
+	"Tagged": [
+		[
+			"Groundedness",
+			"GroundOnly"
+		],
+		[
+			"LandingLagFrames",
+			"7"
+		],
+		[
+			"LandingLagAnimation",
+			"None"
+		],
+		[
+			"RootedType",
+			"Rooted"
+		],
+		[
+			"BReverseType",
+			"None"
+		],
+		[
+			"EndInCrouchWhenGrounded",
+			"True"
+		]
+	]
+}

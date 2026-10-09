@@ -1,0 +1,354 @@
+General
+{
+	"Tagged": [
+		[
+			"Weight",
+			"99"
+		],
+		[
+			"ECBDimensions",
+			"(X=80.000000,Y=170.000000)"
+		],
+		[
+			"ECBDimensions.X",
+			"80.000000"
+		],
+		[
+			"ECBDimensions.Y",
+			"170.000000"
+		],
+		[
+			"EcbBones",
+			"(\"HeadN\",\"BustN\",\"XRotN5\",\"RArmJ\",\"LArmJ\",\"RKneeJ\",\"LKneeJ\")"
+		],
+		[
+			"EcbBones.EcbBones[0]",
+			"HeadN"
+		],
+		[
+			"EcbBones.EcbBones[1]",
+			"BustN"
+		],
+		[
+			"EcbBones.EcbBones[2]",
+			"XRotN5"
+		],
+		[
+			"EcbBones.EcbBones[3]",
+			"RArmJ"
+		],
+		[
+			"EcbBones.EcbBones[4]",
+			"LArmJ"
+		],
+		[
+			"EcbBones.EcbBones[5]",
+			"RKneeJ"
+		],
+		[
+			"EcbBones.EcbBones[6]",
+			"LKneeJ"
+		],
+		[
+			"LandFrames",
+			"4"
+		]
+	]
+}
+Friction
+{
+	"Tagged": [
+		[
+			"FrictionGround",
+			"0.853000"
+		],
+		[
+			"FrictionAir",
+			"0.080000"
+		]
+	]
+}
+Dash
+{
+	"Tagged": [
+		[
+			"DashFrames",
+			"15"
+		],
+		[
+			"DashStopFrames",
+			"13"
+		],
+		[
+			"DashSpeed",
+			"21.330000"
+		],
+		[
+			"DashAcceleration",
+			"1.707000"
+		]
+	]
+}
+Run
+{
+	"Tagged": [
+		[
+			"WalkAccelerationMax",
+			"1.067000"
+		],
+		[
+			"WalkSpeedMax",
+			"9.067000"
+		],
+		[
+			"WalkTurnFrames",
+			"12"
+		]
+	]
+}
+Air Movement
+{
+	"Tagged": [
+		[
+			"Gravity",
+			"1.387000"
+		],
+		[
+			"HitstunGravity",
+			"1.387000"
+		],
+		[
+			"FallSpeedMax",
+			"30.933001"
+		],
+		[
+			"FastFallSpeed",
+			"37.333000"
+		],
+		[
+			"GravityJumpSpeed",
+			"0.000000"
+		],
+		[
+			"AirAcceleration",
+			"0.640000"
+		],
+		[
+			"AirSpeedHorizontalMax",
+			"11.947000"
+		],
+		[
+			"JumpSpeedHorizontalMax",
+			"22.400000"
+		],
+		[
+			"FullHopSpeed",
+			"34.452999"
+		],
+		[
+			"ShortHopSpeed",
+			"21.653000"
+		],
+		[
+			"DoubleJumpSpeed",
+			"29.000000"
+		],
+		[
+			"DoubleJumpMaxHorizontalSpeed",
+			"11.947000"
+		],
+		[
+			"DoubleJumpSpeedDecay",
+			"0.000000"
+		],
+		[
+			"MaxDoubleJumps",
+			"1"
+		],
+		[
+			"PlatdropLandingLockoutFrames",
+			"10"
+		]
+	]
+}
+Defense
+{
+	"Tagged": [
+		[
+			"AirDodgeSpeed",
+			"25.000000"
+		],
+		[
+			"AirDodgeFriction",
+			"0.853000"
+		],
+		[
+			"RollSpeed",
+			"28.000000"
+		],
+		[
+			"ShieldSizeMultiplier",
+			"1.000000"
+		],
+		[
+			"ShieldOffsetOverride",
+			"0.000000"
+		]
+	]
+}
+Items
+{
+	"Tagged": [
+		[
+			"ItemFthrowReleaseOffset",
+			"(X=105.000000,Y=88.000000)"
+		],
+		[
+			"ItemFthrowReleaseOffset.X",
+			"105.000000"
+		],
+		[
+			"ItemFthrowReleaseOffset.Y",
+			"88.000000"
+		],
+		[
+			"ItemThrowDashReleaseOffset",
+			"(X=105.000000,Y=88.000000)"
+		],
+		[
+			"ItemThrowDashReleaseOffset.X",
+			"105.000000"
+		],
+		[
+			"ItemThrowDashReleaseOffset.Y",
+			"88.000000"
+		],
+		[
+			"ItemUthrowReleaseOffset",
+			"(X=0.000000,Y=240.000000)"
+		],
+		[
+			"ItemUthrowReleaseOffset.X",
+			"0.000000"
+		],
+		[
+			"ItemUthrowReleaseOffset.Y",
+			"240.000000"
+		],
+		[
+			"ItemDthrowReleaseOffset",
+			"(X=0.000000,Y=20.000000)"
+		],
+		[
+			"ItemDthrowReleaseOffset.X",
+			"0.000000"
+		],
+		[
+			"ItemDthrowReleaseOffset.Y",
+			"20.000000"
+		],
+		[
+			"ItemTossReleaseOffset",
+			"(X=-100.000000,Y=180.000000)"
+		],
+		[
+			"ItemTossReleaseOffset.X",
+			"-100.000000"
+		],
+		[
+			"ItemTossReleaseOffset.Y",
+			"180.000000"
+		]
+	]
+}
+Ledge
+{
+	"Tagged": [
+		[
+			"DefaultLedgeGrabBoxOffset",
+			"(X=-50.000000,Y=125.000000)"
+		],
+		[
+			"DefaultLedgeGrabBoxOffset.X",
+			"-50.000000"
+		],
+		[
+			"DefaultLedgeGrabBoxOffset.Y",
+			"125.000000"
+		],
+		[
+			"DefaultLedgeGrabBoxDimensions",
+			"(X=200.000000,Y=110.000000)"
+		],
+		[
+			"DefaultLedgeGrabBoxDimensions.X",
+			"200.000000"
+		],
+		[
+			"DefaultLedgeGrabBoxDimensions.Y",
+			"110.000000"
+		],
+		[
+			"LedgeDropOffset",
+			"(X=-40.000000,Y=-170.000000)"
+		],
+		[
+			"LedgeDropOffset.X",
+			"-40.000000"
+		],
+		[
+			"LedgeDropOffset.Y",
+			"-170.000000"
+		],
+		[
+			"OneWayLedgeWallHeight",
+			"95.000000"
+		],
+		[
+			"LedgeStandSpeed",
+			"16.000000"
+		],
+		[
+			"LedgeRollSpeed",
+			"32.000000"
+		],
+		[
+			"LedgeJumpMaxHorizontalAirSpeed",
+			"11.000000"
+		]
+	]
+}
+Knockdown
+{
+	"Tagged": [
+		[
+			"GetupRollSpeed",
+			"28.000000"
+		],
+		[
+			"TechRollSpeed",
+			"30.000000"
+		]
+	]
+}
+Wall Jump
+{
+	"Tagged": [
+		[
+			"WallJumpSpeed",
+			"(X=14.930000,Y=33.070000)"
+		],
+		[
+			"WallJumpSpeed.X",
+			"14.930000"
+		],
+		[
+			"WallJumpSpeed.Y",
+			"33.070000"
+		],
+		[
+			"CanWallCling",
+			"False"
+		]
+	]
+}
