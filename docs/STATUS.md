@@ -13,7 +13,7 @@ Last updated 2026-10-09.
 | 5 Attributes | Manual | Auto from mapping table | Dump restored CD_ (P-ATTR-1) |
 | 6 Movement fitting | Script per anim | Auto for all TransN anims | Generalise `fit_transn.py` |
 | 7 Unreal import/setup | Manual paste | Editor Python script | Prove Python can write CD_/ATT_ struct props |
-| 8 Backup/publish | Script (`backup_mod.py`) | Done | GitHub remote for `R2_Captain_Falcon` pending |
+| 8 Backup/publish | Script (`backup_mod.py`) | Done | — (pushes to github.com/CVaranese/rivals-2-falcon, public) |
 
 ## Feature status (Falcon)
 
