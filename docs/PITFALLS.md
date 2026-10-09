@@ -20,6 +20,27 @@ found; don't delete fixed ones, mark them **Fixed** so the history stays.
   (that's what saved us, but restoring took extra editor steps; see [RECOVERY.md](RECOVERY.md)).
 - **Status:** Verified (happened 2026-10-08). Backup script added 2026-10-09.
 
+<a id="p-ue-12"></a>
+### P-UE-12 — Publish crashes after the Oct 8 2026 R2Kit update (shield material assert)  ❗ Open
+- **Symptom:** the editor crashes mid-publish and the mod is left in the published layout (see P-UE-0).
+- **Log** (`Project/Saved/Logs/Rivals2.log`):
+  ```
+  Saving Package: /Game/ModContent/<id>/PublishedAssets/References/Game/Characters/Shared/Shield/MAT_Cha_ShieldGlow
+  LogMaterial: Error: Compiler->Texture() failed to find texture 'T_Cha_ShieldOffset_M' in referenced list of size '2'
+  Assertion failed: TextureReferenceIndex != INDEX_NONE [HLSLMaterialTranslator.cpp:8555]
+  ```
+- **Cause (likely):** an engine bug in the kit update installed 2026-10-08 ~20:23–20:34 (binaries + base content, including
+  `MAT_Cha_Shield*`). Publishing copies referenced base-game assets into `PublishedAssets/References/`. While
+  saving or thumbnailing its copy of `MAT_Cha_ShieldGlow`, the material compiler can't match the copied texture.
+  The mod references it through the skin's shield visuals. The Oct 8 wipe happened at 20:56, right after the
+  update, so it was very likely the same crash.
+- **Recovery:** this time `Saved/ModPublishBackup` was complete (413 files). Restore from it or from the
+  `rivals-2-falcon` backup repo, and delete `PublishedAssets/`.
+- **Fix:** none yet. Don't publish until resolved. Ideas: report to the R2 workshop devs with the log excerpt; test
+  whether a fresh template mod publishes; check what references the shield material (skin shield visuals) and
+  whether pointing it elsewhere avoids the copy.
+- **Status:** Crash verified 2026-10-09 (second occurrence).
+
 <a id="p-ue-1"></a>
 ### P-UE-1 — Mesh import settings
 - **Symptom:** only a skeleton is created / mesh fails to import / capsule shadow errors.
