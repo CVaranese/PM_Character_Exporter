@@ -43,10 +43,13 @@ found; don't delete fixed ones, mark them **Fixed** so the history stays.
     the kit update installed 2026-10-08 ~20:23–20:34. The Oct 8 wipe (20:56) was very likely the same crash.
 - **Recovery:** this time `Saved/ModPublishBackup` was complete (413 files). Restore from it or from the
   `rivals-2-falcon` backup repo, and delete `PublishedAssets/`.
-- **Fix:** devs are working on it (2026-10-09). Don't publish until resolved. Possible local workaround (untested): put
-  mod-local copies of the whole shield chain (SK, MIs, MATs, MF, textures; ~16 assets) in `UnrealAssets/Shield/`,
-  with the copies referencing each other, and point `Skin_Cap_Default.shield_mesh` at the local SK. Publish then
-  has nothing external to duplicate in that chain. It's the only reference into the chain from the mod.
+- **Fix:** devs are working on it (2026-10-09).
+- **Local workaround (applied to Falcon 2026-10-09, publish not yet tested):** `Unreal_Scripts/local_shield_fix.py`
+  copies `SK_Cha_Shield` to `UnrealAssets/Shield/SK_<Code>_Shield`, sets its 4 material slots (Glass, Stun,
+  Element, Glow; these are the entire broken chain) to the mod's own `MI_<Code>_Body`, and points the skin's
+  `shield_mesh` at the copy. Afterwards no mod file references the shield MIs/MATs/MF/texture (verified on
+  disk). **The shield looks wrong** (body material), which is accepted until the devs' fix. To undo, set
+  `shield_mesh` back to `/Game/Characters/Shared/Shield/SK_Cha_Shield` and delete `UnrealAssets/Shield/`.
 - **Status:** Crash verified 2026-10-09 (second occurrence).
 
 <a id="p-ue-1"></a>
