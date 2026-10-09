@@ -106,10 +106,13 @@ def main():
         print("R2Kit is open: skipping the JSON data dump (binary backup still committed)")
     else:
         env = dict(os.environ, R2_MOD_ROOT=f"/Game/ModContent/{args.mod_id}", R2_DUMP_DIR=str(repo / "data"))
-        r = run([str(UE_CMD), str(UPROJECT), "-run=pythonscript", f"-script={DUMP_SCRIPT}",
-                 "-unattended", "-nosplash", "-nullrhi"], env=env)
         summary = repo / "data" / "_dump_summary.txt"
-        if r.returncode == 0 and summary.exists():
+        started = datetime.datetime.now().timestamp()
+        run([str(UE_CMD), str(UPROJECT), "-run=pythonscript", f"-script={DUMP_SCRIPT}",
+             "-unattended", "-nosplash", "-nullrhi"], env=env)
+        # Don't trust the exit code: unrelated engine errors (e.g. a gamepad driver) make it 1 even when
+        # the script succeeded. The summary file is written last, so a fresh one means the dump finished.
+        if summary.exists() and summary.stat().st_mtime >= started:
             dump_note = summary.read_text().strip().replace("\n", "; ")
             print(f"data dump: {dump_note}")
         else:

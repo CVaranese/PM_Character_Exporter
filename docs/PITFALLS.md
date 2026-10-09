@@ -101,6 +101,9 @@ found; don't delete fixed ones, mark them **Fixed** so the history stays.
 - Pass settings through environment variables (the scripts read `R2_*`).
 - Harmless noise in the log: the ZenShared DDC timeout (192.168.1.8, which is the developers' internal
   cache), `MPC_StoryMode` not found, and Python name-clash warnings for `CharacterMoveData`/`RivalsCpuData`.
+- **Don't trust the exit code.** The commandlet returns 1 if *anything* logged an error, e.g.
+  `FSDLInputDevice::OnGamepadAttached - duplicate InstanceID` when a controller is plugged in, even though
+  "Python script executed successfully". Check the script's own output file instead.
 - **Status:** Verified 2026-10-09.
 
 <a id="p-ue-11"></a>
@@ -250,6 +253,22 @@ found; don't delete fixed ones, mark them **Fixed** so the history stays.
 - PM strongs have separate `Start` animations (`AttackS4Start` …). The charged pipeline concatenates
   Start + Hold + attack. The README's "skip for now?" note predates that pipeline. Check against restored
   `ATT_Cap_Fstrong/Ustrong/Dstrong`.
+
+<a id="p-move-11"></a>
+### P-MOVE-11 — Can't grab ledge during/after an attack (e.g. up-b)
+- **Symptom:** Falcon can't grab ledge after up-b.
+- **Cause:** R2 only allows ledge grabs during an attack on windows with
+  `LedgeProperties.CanGrabLedgeOnFrame >= 0`. The converter's fixed `LEDGE_PROPS` string writes **-1 (never)**
+  on every window of every attack.
+- **PM source:** the Rukai Data script has `LedgeGrabEnable(...)` commands, e.g. Falcon `SpecialHi`:
+  `Disable` at 0, `EnableInFrontAndBehind` at frame 12 (same frame as the dive grab box), `EnableInFront` at 54.
+  Map the frame to the R2 window that contains it, and set `CanGrabLedgeOnFrame` relative to that window's
+  start (0 if it lines up with the start), plus every following window of the move.
+- **Fix:** `Unreal_Scripts/set_ledge_grab.py` (env `R2_ATTACK`, `R2_WINDOWS`, `R2_FRAME`, `R2_APPLY`).
+  For Falcon up-b: Active, Recovery Up, Recovery Down, Special Fall at 0. Window grab-box dimensions are left at
+  (0, 0). *Assumed* to mean "use CD_ default box" (200×110 @ (-50, 125)). **Verify in playtest.**
+- **Target:** the converter should parse `LedgeGrabEnable` and set `CanGrabLedgeOnFrame` on the right windows.
+- **Status:** Cause verified 2026-10-09; fix pending playtest.
 
 ---
 
