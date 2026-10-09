@@ -82,6 +82,27 @@ found; don't delete fixed ones, mark them **Fixed** so the history stays.
 - If an attack window's animation length doesn't match its frame length, playback **scales to fit**. That's
   silent, so a wrong `AnimationLengthFrames` speeds up or slows down the animation instead of erroring.
 
+<a id="p-ue-9"></a>
+### P-UE-9 — CD_ / ATT_ are Blueprints: their data is on the class default object
+- **Symptom:** exporting an `ATT_` or `CD_` asset (Asset Actions → Export / T3D) gives an empty event
+  graph and none of the attack data.
+- **Cause:** they're Blueprint classes. Values live on the generated class's default object (CDO).
+- **Fix (Python):** `cls = EditorAssetLibrary.load_blueprint_class(pkg)`, `cdo = unreal.get_default_object(cls)`,
+  then `cdo.get_editor_property(...)`. Struct values have `.export_text()`, which produces the same text as
+  details-panel Copy. Property names can be listed by parsing the class's Python docstring
+  ("Editor Properties" section). See `Unreal_Scripts/dump_mod_assets.py`.
+- **Status:** Verified 2026-10-09.
+
+<a id="p-ue-10"></a>
+### P-UE-10 — Running editor Python headless
+- `UnrealEditor-Cmd.exe <Project>\Rivals2.uproject -run=pythonscript -script="<file.py>" -unattended -nosplash -nullrhi -stdout`
+  works with R2Kit. A full run takes about 25 s. **The R2Kit editor must be closed**, since two editors on
+  one project can corrupt assets.
+- Pass settings through environment variables (the scripts read `R2_*`).
+- Harmless noise in the log: the ZenShared DDC timeout (192.168.1.8, which is the developers' internal
+  cache), `MPC_StoryMode` not found, and Python name-clash warnings for `CharacterMoveData`/`RivalsCpuData`.
+- **Status:** Verified 2026-10-09.
+
 ---
 
 ## Scale & coordinates

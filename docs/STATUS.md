@@ -43,7 +43,7 @@ Last updated 2026-10-09.
   `action.fcurves` directly and may need updating.
 
 ### R2Kit editor Python
-1. Read: dump `CD_Captain` and every `ATT_Cap_*` to JSON. Also needed for recovery step 3.
+1. ✅ Read: dump `CD_Captain` and every `ATT_Cap_*` to JSON. Works headless (P-UE-9, P-UE-10).
 2. Write: set one ATT_ window/hitbox property from Python and confirm it survives save + playtest.
 3. If that works, replace the paste-file workflow with direct writes.
 

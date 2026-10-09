@@ -35,15 +35,16 @@ Moving the files on disk isn't enough: the paths inside each `.uasset` would sti
 
 1. ✅ Close the editor. Run `git checkout -- PublishedAssets` in the mod folder → 559 files restored
    (2026-10-09).
-2. ☐ Open R2Kit. Check that `CD_Captain` and a few `ATT_Cap_*` open and show our data (not template
-   defaults). If assets show as cooked or uneditable, stop and reassess.
-3. ☐ Dump everything to text with editor Python (CD_ attributes, every ATT_ window/hitbox/on-hit) into the
-   exporter repo. This makes our hand-tuned values (attributes, up-special momentum) permanent, readable
-   and diffable, whatever happens to the binary assets.
-4. ☐ Move `PublishedAssets/*` (except `References/`) back into `UnrealAssets/` **inside the editor** (drag
-   and move, so references are fixed up), then right-click → Fix Up Redirectors.
-5. ☐ Repoint everything that references `PublishedAssets/References/Game/X` to the real `/Game/X` asset
-   (Python: find referencers, then consolidate/replace references), then delete `References/`.
+2. ✅ Assets load and hold our data (verified headless, 2026-10-09).
+3. ✅ Dumped all 60 data assets to [`character_dumps/Captain/`](../character_dumps/Captain) with
+   `Unreal_Scripts/dump_mod_assets.py` and committed them. Includes all 100 CD_ attributes and every
+   ATT_ window/hitbox/on-hit property, plus the up-special momentum values (e.g. Active: velocity
+   (4.1753, 27.0939), gravity 0.8302; Recovery Down: gravity 2.1541, max fall 18.8194).
+4. ☐ Run `Unreal_Scripts/restore_published_layout.py` with `R2_APPLY=1`. It does steps 4 and 5 together:
+   repoint the 146 `References/` copies to the real `/Game/...` originals (consolidate), then move the
+   remaining 412 assets into `UnrealAssets/` with references rewritten. Dry run (2026-10-09): every
+   reference has a matching original with the same class, and the only conflict is `SteamPreview` (merged).
+5. ☐ Re-run the dump and check that no `PublishedAssets` paths remain.
 6. ☐ Playtest.
 7. ☐ Set up a backup of `UnrealAssets/` we control before the next publish ([P-UE-0](PITFALLS.md#p-ue-0)).
 
