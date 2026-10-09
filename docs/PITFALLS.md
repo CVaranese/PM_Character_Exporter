@@ -99,6 +99,10 @@ found; don't delete fixed ones, mark them **Fixed** so the history stays.
   works with R2Kit. A full run takes about 25 s. **The R2Kit editor must be closed**, since two editors on
   one project can corrupt assets.
 - Pass settings through environment variables (the scripts read `R2_*`).
+- **Preferred:** run through `python -I Unreal_Scripts/run_ue_python.py <script.py> [R2_KEY=value ...]`. It
+  refuses while R2Kit is open, only runs scripts from `Unreal_Scripts/`, and reports success from the log.
+  It's also the one command allowed in `.claude/settings.local.json`, so Claude Code can run it without a
+  permission prompt.
 - Harmless noise in the log: the ZenShared DDC timeout (192.168.1.8, which is the developers' internal
   cache), `MPC_StoryMode` not found, and Python name-clash warnings for `CharacterMoveData`/`RivalsCpuData`.
 - **Don't trust the exit code.** The commandlet returns 1 if *anything* logged an error, e.g.
