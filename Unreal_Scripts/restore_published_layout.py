@@ -106,23 +106,10 @@ def main():
     if not tools.rename_assets(renames):
         log("  [FAILED] rename_assets returned False; check the output log")
 
-    # 3. Fix up any redirectors left behind, then save only the mod's own assets.
-    registry = unreal.AssetRegistryHelpers.get_asset_registry()
-    redirectors = [
-        d.get_asset() for d in registry.get_assets_by_path(SRC, recursive=True)
-        if d.asset_class_path.asset_name == "ObjectRedirector"
-    ]
-    if redirectors:
-        tools.fixup_referencers(redirectors)
+    # 3. Save the mod's own assets. Redirectors left in PublishedAssets are removed by
+    #    cleanup_redirectors.py (UE 5.8 Python has no AssetTools.fixup_referencers).
     eal.save_directory(DST, only_if_is_dirty=False, recursive=True)
-
-    remaining = eal.list_assets(SRC, recursive=True, include_folder=False)
-    log(f"remaining under PublishedAssets: {len(remaining)}")
-    for a in remaining:
-        log(f"  {a}")
-    if not remaining:
-        eal.delete_directory(SRC)
-        log("deleted empty PublishedAssets")
+    log("moved and saved; now run cleanup_redirectors.py")
 
 
 try:

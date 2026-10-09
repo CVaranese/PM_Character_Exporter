@@ -1,0 +1,27 @@
+{
+  "asset": "/Game/ModContent/3729910023/UnrealAssets/Skins/Default/Data/RD_Cap_Default_GameOver",
+  "kind": "GameOverRivalCaptureRenderData",
+  "properties": {
+    "an_hitstun_heavy": null,
+    "an_idle": null,
+    "an_knockdown_start": null,
+    "an_neutral_getup": null,
+    "an_taunt": null,
+    "an_tumble": null,
+    "camera_position_override": "(Rotation=(X=-0.000000,Y=0.000000,Z=-0.707107,W=0.707107),Translation=(X=0.000000,Y=350.000000,Z=100.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))",
+    "character_menu_location_adjustment": "(X=-40.000000,Y=-60.000000,Z=0.000000)",
+    "character_menu_pose_animation": null,
+    "character_menu_rotation_adjustment": "(Pitch=0.000000,Yaw=25.000000,Roll=0.000000)",
+    "character_menu_scale_adjustment": "(X=1.000000,Y=1.000000,Z=1.000000)",
+    "character_pose_anim_pos": 0.0,
+    "character_pose_animation": "/Game/Characters/Workshop/AN_Wrk_Dummy_Idle.AN_Wrk_Dummy_Idle",
+    "directional_light_color": "(R=0.010000,G=0.010000,B=0.010000,A=1.000000)",
+    "directional_light_vector": "(R=0.000000,G=1.000000,B=1.000000,A=1.000000)",
+    "facing_direction": "LEFT",
+    "field_of_view_override": 39.5,
+    "mesh_effects_to_display": [],
+    "outline_thickness_multiplier": 1.0,
+    "shading_curve": null
+  },
+  "unreadable": {}
+}

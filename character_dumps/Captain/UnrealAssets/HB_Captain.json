@@ -1,0 +1,15 @@
+{
+  "asset": "/Game/ModContent/3729910023/UnrealAssets/HB_Captain",
+  "kind": "PhysicsAsset",
+  "properties": {
+    "asset_user_data": [],
+    "constraint_profiles": [],
+    "not_for_dedicated_server": false,
+    "physical_animation_profiles": [],
+    "solver_iterations": "(SolverIterations=3,JointIterations=2,CollisionIterations=2,SolverPushOutIterations=1,JointPushOutIterations=1,CollisionPushOutIterations=0)",
+    "solver_settings": "(PositionIterations=6,VelocityIterations=1,ProjectionIterations=1,CullDistance=3.000000,MaxDepenetrationVelocity=0.000000,FixedTimeStep=0.000000,bUseLinearJointSolver=True,bUseManifolds=False)",
+    "solver_type": "WORLD",
+    "thumbnail_info": null
+  },
+  "unreadable": {}
+}

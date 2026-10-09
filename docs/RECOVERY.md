@@ -40,13 +40,19 @@ Moving the files on disk isn't enough: the paths inside each `.uasset` would sti
    `Unreal_Scripts/dump_mod_assets.py` and committed them. Includes all 100 CD_ attributes and every
    ATT_ window/hitbox/on-hit property, plus the up-special momentum values (e.g. Active: velocity
    (4.1753, 27.0939), gravity 0.8302; Recovery Down: gravity 2.1541, max fall 18.8194).
-4. ☐ Run `Unreal_Scripts/restore_published_layout.py` with `R2_APPLY=1`. It does steps 4 and 5 together:
-   repoint the 146 `References/` copies to the real `/Game/...` originals (consolidate), then move the
-   remaining 412 assets into `UnrealAssets/` with references rewritten. Dry run (2026-10-09): every
-   reference has a matching original with the same class, and the only conflict is `SteamPreview` (merged).
-5. ☐ Re-run the dump and check that no `PublishedAssets` paths remain.
-6. ☐ Playtest.
-7. ☐ Set up a backup of `UnrealAssets/` we control before the next publish ([P-UE-0](PITFALLS.md#p-ue-0)).
+4. ✅ Ran `Unreal_Scripts/restore_published_layout.py` with `R2_APPLY=1` (2026-10-09). It consolidated the
+   146 `References/` copies into the real `/Game/...` originals and moved 412 assets into `UnrealAssets/`.
+5. ✅ Ran `Unreal_Scripts/cleanup_redirectors.py` to delete the redirectors left in `PublishedAssets/`
+   (none were referenced).
+6. ✅ Re-dumped: all 60 data assets are identical to the pre-restore dump after path normalization, and no
+   property holds a `PublishedAssets` path. (Seven assets, `Char_Cap`, `Skin_Cap_Default`, the 4 palette `CS_`
+   and `SK_Cap_Default`, still contain stale path *text* outside their properties. The asset registry shows
+   no dependency on it, so it's harmless.)
+7. ☐ Delete the leftover `PublishedAssets` folder by hand with R2Kit closed. One unreferenced redirector
+   (`References/Game/VFX/Textures/Noise/T_Veronoi_02_G`) couldn't be deleted by the editor, probably because
+   the engine loads it at startup. The publish docs say to delete this folder before publishing anyway.
+8. ☐ Playtest.
+9. ☐ Set up a backup of `UnrealAssets/` we control before the next publish ([P-UE-0](PITFALLS.md#p-ue-0)).
 
 ## Lessons
 

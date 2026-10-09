@@ -1,0 +1,9 @@
+{
+  "asset": "/Game/ModContent/3729910023/UnrealAssets/VFX_Captain",
+  "kind": "Blueprint CDO (VFX_Captain_C)",
+  "properties": {
+    "vfx_category": "Captain",
+    "vfx_definitions": {}
+  },
+  "unreadable": {}
+}

@@ -103,6 +103,18 @@ found; don't delete fixed ones, mark them **Fixed** so the history stays.
   cache), `MPC_StoryMode` not found, and Python name-clash warnings for `CharacterMoveData`/`RivalsCpuData`.
 - **Status:** Verified 2026-10-09.
 
+<a id="p-ue-11"></a>
+### P-UE-11 — Moving/consolidating assets from Python (UE 5.8)
+- `AssetTools.rename_assets([...AssetRenameData])` moves assets, rewrites references and **saves on its
+  own**, leaving the old files deleted. `EditorAssetLibrary.consolidate_assets(target, [copies])` turns
+  the copies into redirectors to `target`.
+- `AssetTools.fixup_referencers` **does not exist** in R2Kit's Python. Instead, check
+  `AssetRegistry.get_referencers` on each redirector, re-save any referencers, then delete the redirectors
+  (`Unreal_Scripts/cleanup_redirectors.py`).
+- The editor may refuse to delete a redirector the engine loads at startup. Delete it on disk with the
+  editor closed, after checking that nothing references it.
+- **Status:** Verified 2026-10-09.
+
 ---
 
 ## Scale & coordinates

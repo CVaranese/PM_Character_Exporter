@@ -1,0 +1,36 @@
+{
+  "asset": "/Game/ModContent/3729910023/UnrealAssets/Attacks/ATT_Cap_DashGrab",
+  "kind": "Blueprint CDO (ATT_Cap_DashGrab_C)",
+  "properties": {
+    "aerial_animation": null,
+    "article_creation_data": [],
+    "attack_name": "",
+    "b_reverse_type": "NONE",
+    "camera_shake_data": [],
+    "end_in_crouch_when_grounded": false,
+    "grounded_animation": "/Game/ModContent/3729910023/UnrealAssets/Animation/AN_Cap_CatchDash.AN_Cap_CatchDash",
+    "groundedness": "GROUND_ONLY",
+    "hitbox_attributes": [
+      "(Name=\"Grab 1\",BoneName=\"TopN\",OffsetBoneName=\"\",Offset=(X=0.000000,Y=-105.486740,Z=88.954440),bClampToGameplayPlane=True,InitialInterpolationMode=None,InitialInterpolationBoneName=\"\",InitialInterpolationOffsetBoneName=\"\",InitialInterpolationOffset=(X=0.000000,Y=0.000000,Z=0.000000),UseCurrentFrameForInterpolation=False,Radius=41.704060,CanRehitAfterXFrames=0,HitResponse=Grab,CanHitgrabKnockedDownOpponents=False,CanGrabArticles=False,OnHitPropertiesName=\"\",Groundedness=GroundOrAir,bNeverHitTeammates=False)",
+      "(Name=\"Grab 2\",BoneName=\"TopN\",OffsetBoneName=\"\",Offset=(X=0.000000,Y=-95.887340,Z=33.811220),bClampToGameplayPlane=True,InitialInterpolationMode=None,InitialInterpolationBoneName=\"\",InitialInterpolationOffsetBoneName=\"\",InitialInterpolationOffset=(X=0.000000,Y=0.000000,Z=0.000000),UseCurrentFrameForInterpolation=False,Radius=41.704060,CanRehitAfterXFrames=0,HitResponse=Grab,CanHitgrabKnockedDownOpponents=False,CanGrabArticles=False,OnHitPropertiesName=\"\",Groundedness=GroundOrAir,bNeverHitTeammates=False)",
+      "(Name=\"Grab 3\",BoneName=\"TopN\",OffsetBoneName=\"\",Offset=(X=0.000000,Y=-86.287940,Z=-14.612420),bClampToGameplayPlane=True,InitialInterpolationMode=None,InitialInterpolationBoneName=\"\",InitialInterpolationOffsetBoneName=\"\",InitialInterpolationOffset=(X=0.000000,Y=0.000000,Z=0.000000),UseCurrentFrameForInterpolation=False,Radius=41.704060,CanRehitAfterXFrames=0,HitResponse=Grab,CanHitgrabKnockedDownOpponents=False,CanGrabArticles=False,OnHitPropertiesName=\"\",Groundedness=GroundOrAir,bNeverHitTeammates=False)"
+    ],
+    "hitbox_on_hit_properties": [],
+    "landing_lag_animation": null,
+    "landing_lag_frames": 0,
+    "mesh_effect_data": [],
+    "only_walljump_with_ledges_disabled": false,
+    "rooted_type": "ROOTED",
+    "rumble_data": [],
+    "sfx_creation_data": [],
+    "throw_data": "(ThrowReleaseData=,ThrownAnimationData=)",
+    "vfx_creation_data": [],
+    "vfx_definitions": {},
+    "windows": [
+      "(StringTableKey=\"Startup\",WindowLengthFrames=10,IasaFrame=-1,AnimationStartFrame=0,AnimationLengthFrames=10,NextWindowStringTableKey=\"Active\",WindowCancels=,VelocityData=,MovementProperties=(Gravity=-1.000000,MaxFallSpeed=-1.000000,FrictionGround=-1.000000,FrictionAir=-1.000000,CanDrift=Default,AirAcceleration=-1.000000,AirSpeedHorizontalMax=-1.000000,CanFallThroughPlatforms=False,DiminishingReturnsPercentLostPerUse=0.000000,MinimumDiminishingReturnsValue=0.000000),HitboxWindows=,bRefreshHasHit=True,HurtboxStateChanges=,AdvancedProperties=(WindowArmor=0,AerialAutocancelFrame=-1,CanWallJumpOnFrame=-1,BReverseOnFrame=-1,ToggleECBActiveOnFrame=,ToggleRootedOnFrame=,TurnAroundOnFrame=,ToggleFarFromECBOnFrame=,ToggleCanFastfallOnFrame=,ToggleVisibleOnFrame=,CooldownData=(CooldownStartFrame=0,CooldownDuration=0),bDisableHitpauseYOffset=False,PreserveRotation=False),LedgeProperties=(CanGrabLedgeOnFrame=-1,LedgeGrabBoxOffset=(X=0.000000,Y=0.000000),LedgeGrabBoxDimensions=(X=0.000000,Y=0.000000),ReleaseLedgeOnFrame=-1,StayOnLedge=False))",
+      "(StringTableKey=\"Active\",WindowLengthFrames=2,IasaFrame=-1,AnimationStartFrame=10,AnimationLengthFrames=2,NextWindowStringTableKey=\"Recovery\",WindowCancels=((WindowCancelType=OnGrab,WindowCancelFrame=-1,PostCancelWindowStringTableKey=\"Hold\",CancelIntoAttack=Grab)),VelocityData=,MovementProperties=(Gravity=-1.000000,MaxFallSpeed=-1.000000,FrictionGround=-1.000000,FrictionAir=-1.000000,CanDrift=Default,AirAcceleration=-1.000000,AirSpeedHorizontalMax=-1.000000,CanFallThroughPlatforms=False,DiminishingReturnsPercentLostPerUse=0.000000,MinimumDiminishingReturnsValue=0.000000),HitboxWindows=((HitboxName=\"Grab 1\",LengthInFrames=2),(HitboxName=\"Grab 2\",LengthInFrames=2),(HitboxName=\"Grab 3\",LengthInFrames=2)),bRefreshHasHit=True,HurtboxStateChanges=,AdvancedProperties=(WindowArmor=0,AerialAutocancelFrame=-1,CanWallJumpOnFrame=-1,BReverseOnFrame=-1,ToggleECBActiveOnFrame=,ToggleRootedOnFrame=,TurnAroundOnFrame=,ToggleFarFromECBOnFrame=,ToggleCanFastfallOnFrame=,ToggleVisibleOnFrame=,CooldownData=(CooldownStartFrame=0,CooldownDuration=0),bDisableHitpauseYOffset=False,PreserveRotation=False),LedgeProperties=(CanGrabLedgeOnFrame=-1,LedgeGrabBoxOffset=(X=0.000000,Y=0.000000),LedgeGrabBoxDimensions=(X=0.000000,Y=0.000000),ReleaseLedgeOnFrame=-1,StayOnLedge=False))",
+      "(StringTableKey=\"Recovery\",WindowLengthFrames=28,IasaFrame=-1,AnimationStartFrame=12,AnimationLengthFrames=28,NextWindowStringTableKey=\"\",WindowCancels=,VelocityData=,MovementProperties=(Gravity=-1.000000,MaxFallSpeed=-1.000000,FrictionGround=-1.000000,FrictionAir=-1.000000,CanDrift=Default,AirAcceleration=-1.000000,AirSpeedHorizontalMax=-1.000000,CanFallThroughPlatforms=False,DiminishingReturnsPercentLostPerUse=0.000000,MinimumDiminishingReturnsValue=0.000000),HitboxWindows=,bRefreshHasHit=True,HurtboxStateChanges=,AdvancedProperties=(WindowArmor=0,AerialAutocancelFrame=-1,CanWallJumpOnFrame=-1,BReverseOnFrame=-1,ToggleECBActiveOnFrame=,ToggleRootedOnFrame=,TurnAroundOnFrame=,ToggleFarFromECBOnFrame=,ToggleCanFastfallOnFrame=,ToggleVisibleOnFrame=,CooldownData=(CooldownStartFrame=0,CooldownDuration=0),bDisableHitpauseYOffset=False,PreserveRotation=False),LedgeProperties=(CanGrabLedgeOnFrame=-1,LedgeGrabBoxOffset=(X=0.000000,Y=0.000000),LedgeGrabBoxDimensions=(X=0.000000,Y=0.000000),ReleaseLedgeOnFrame=-1,StayOnLedge=False))"
+    ]
+  },
+  "unreadable": {}
+}

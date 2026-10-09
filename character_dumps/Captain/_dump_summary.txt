@@ -1,4 +1,4 @@
 mod root: /Game/ModContent/3729910023
 dumped: 60
-skipped: 500
+skipped: 354
 failed: 0

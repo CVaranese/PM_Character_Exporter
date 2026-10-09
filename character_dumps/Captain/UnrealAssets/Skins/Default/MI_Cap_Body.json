@@ -1,0 +1,57 @@
+{
+  "asset": "/Game/ModContent/3729910023/UnrealAssets/Skins/Default/MI_Cap_Body",
+  "kind": "MaterialInstanceConstant",
+  "properties": {
+    "asset_import_data": null,
+    "asset_user_data": [],
+    "base_property_overrides": "(bOverride_OpacityMaskClipValue=False,bOverride_BlendMode=False,bOverride_ShadingModel=False,bOverride_DitheredLODTransition=False,bOverride_CastDynamicShadowAsMasked=False,bOverride_TwoSided=False,bOverride_bIsThinSurface=False,bOverride_OutputTranslucentVelocity=False,bOverride_bHasPixelAnimation=False,bOverride_bEnableTessellation=False,bOverride_DisplacementScaling=False,bOverride_bEnableDisplacementFade=False,bOverride_DisplacementFadeRange=False,bOverride_MaxWorldPositionOffsetDisplacement=False,bOverride_CompatibleWithLumenCardSharing=False,bOverride_UsageFlags=0,TwoSided=True,bIsThinSurface=False,DitheredLODTransition=False,bCastDynamicShadowAsMasked=False,bOutputTranslucentVelocity=False,bHasPixelAnimation=False,bEnableTessellation=False,bEnableDisplacementFade=False,bCompatibleWithLumenCardSharing=False,BlendMode=BLEND_Masked,ShadingModel=MSM_Unlit,OpacityMaskClipValue=0.333300,DisplacementScaling=(Magnitude=4.000000,Center=0.500000),DisplacementFadeRange=(StartSizePixels=4.000000,EndSizePixels=1.000000),MaxWorldPositionOffsetDisplacement=0.000000,UsageFlags=1)",
+    "blendable_location_override": "BL_SCENE_COLOR_AFTER_TONEMAPPING",
+    "blendable_priority_override": 0,
+    "double_vector_parameter_values": [],
+    "editor_only_data": "/Game/ModContent/3729910023/UnrealAssets/Skins/Default/MI_Cap_Body.MI_Cap_Body:MI_Cap_BodyEditorOnlyData",
+    "font_parameter_values": [],
+    "lightmass_settings": "(EmissiveBoost=1.000000,DiffuseBoost=1.000000,ExportResolutionScale=1.000000,bCastShadowAsMasked=False,bOverrideCastShadowAsMasked=False,bOverrideEmissiveBoost=False,bOverrideDiffuseBoost=False,bOverrideExportResolutionScale=False)",
+    "nanite_override_material": "(bEnableOverride=True,OverrideMaterialEditor=None,OverrideMaterial=None,OverrideMaterialRef=None)",
+    "neural_profile": null,
+    "override_blendable_location": false,
+    "override_blendable_priority": false,
+    "override_phys_material": false,
+    "override_specular_profile": false,
+    "override_subsurface_profile": false,
+    "override_toon_profile": false,
+    "parameter_collection_parameter_values": [],
+    "parent": "/Game/Characters/MAT_Cha_Standard.MAT_Cha_Standard",
+    "phys_material": null,
+    "phys_material_mask": null,
+    "physical_material_map": "[None, None, None, None, None, None, None, None]",
+    "preview_mesh": "None",
+    "runtime_virtual_texture_parameter_values": [],
+    "scalar_parameter_values": [
+      "(AtlasData=(bIsUsedAsAtlasPosition=False,Curve=None,Atlas=None),ParameterInfo=(Name=\"RefractionDepthBias\",Association=GlobalParameter,Index=-1),ParameterValue=0.000000,ExpressionGUID=00000000000000000000000000000000)"
+    ],
+    "sparse_volume_texture_parameter_values": [],
+    "subsurface_profile": null,
+    "texture_collection_parameter_values": [],
+    "texture_parameter_values": [
+      "(ParameterInfo=(Name=\"BaseColor\",Association=GlobalParameter,Index=-1),ParameterValue=\"/Script/Engine.Texture2D'/Game/ModContent/3729910023/UnrealAssets/Skins/Default/cap_body.cap_body'\",ExpressionGUID=23B816AD43DAE8C5FA12E2A105C4B4E5)",
+      "(ParameterInfo=(Name=\"ColorRegionMask\",Association=GlobalParameter,Index=-1),ParameterValue=\"/Script/Engine.Texture2D'/Game/Characters/Clairen/Skins/Default/T_Cla_DefaultClothing_CM.T_Cla_DefaultClothing_CM'\",ExpressionGUID=41F1151C4E6D098DF9DF81A01F93BC51)",
+      "(ParameterInfo=(Name=\"ColorRegionMask2\",Association=GlobalParameter,Index=-1),ParameterValue=\"/Script/Engine.Texture2D'/Game/Characters/Clairen/Skins/Default/T_Cla_DefaultClothing_CM2.T_Cla_DefaultClothing_CM2'\",ExpressionGUID=95AC750F40F2210801876585DA1FABED)",
+      "(ParameterInfo=(Name=\"ColorRegionMask3\",Association=GlobalParameter,Index=-1),ParameterValue=\"/Script/Engine.Texture2D'/Game/Characters/Clairen/Skins/Default/T_Cla_DefaultClothing_CM3.T_Cla_DefaultClothing_CM3'\",ExpressionGUID=8932D01447D711E1D7E813ABB5DF1EC8)"
+    ],
+    "thumbnail_info": "/Game/ModContent/3729910023/UnrealAssets/Skins/Default/MI_Cap_Body.MI_Cap_Body:SceneThumbnailInfoWithPrimitive_0",
+    "user_scene_texture_overrides": [],
+    "vector_parameter_values": [
+      "(ParameterInfo=(Name=\"CustomColorX\",Association=GlobalParameter,Index=-1),ParameterValue=(R=0.396755,G=0.386429,B=0.122139,A=1.000000),ExpressionGUID=BCD5035D4BC900E3861DFCA48B10B229)",
+      "(ParameterInfo=(Name=\"CustomColor0\",Association=GlobalParameter,Index=-1),ParameterValue=(R=0.026722,G=0.028268,B=0.043735,A=1.000000),ExpressionGUID=F4BC04714E5A42FF564B51AC4F874AF0)",
+      "(ParameterInfo=(Name=\"CustomColor1\",Association=GlobalParameter,Index=-1),ParameterValue=(R=0.102242,G=0.097587,B=0.097587,A=1.000000),ExpressionGUID=B91C754B43ABAD5F39771BB62E0C6873)",
+      "(ParameterInfo=(Name=\"CustomColor2\",Association=GlobalParameter,Index=-1),ParameterValue=(R=0.026722,G=0.028268,B=0.043735,A=1.000000),ExpressionGUID=BDC502084BF77E882DEC0A99B5A208A8)",
+      "(ParameterInfo=(Name=\"CustomColor3\",Association=GlobalParameter,Index=-1),ParameterValue=(R=0.026722,G=0.028268,B=0.043735,A=1.000000),ExpressionGUID=B3CE497545CFAEAEA73279A0CAC4981F)",
+      "(ParameterInfo=(Name=\"CustomColor4\",Association=GlobalParameter,Index=-1),ParameterValue=(R=0.102242,G=0.097587,B=0.097587,A=1.000000),ExpressionGUID=BAD13D1A4AA6BF2A1B294FB18DCD32C1)",
+      "(ParameterInfo=(Name=\"CustomColor5\",Association=GlobalParameter,Index=-1),ParameterValue=(R=0.026722,G=0.028268,B=0.043735,A=1.000000),ExpressionGUID=10D201A347BF428FDA92C0B3DBB7FC16)",
+      "(ParameterInfo=(Name=\"CustomColor6\",Association=GlobalParameter,Index=-1),ParameterValue=(R=0.082000,G=0.078267,B=0.078267,A=1.000000),ExpressionGUID=CF6A4019471D903E28D73487FC73C330)",
+      "(ParameterInfo=(Name=\"CustomColor7\",Association=GlobalParameter,Index=-1),ParameterValue=(R=0.088824,G=0.086292,B=0.108000,A=1.000000),ExpressionGUID=A69456D44570C3D97D859DAD3CFB26A2)",
+      "(ParameterInfo=(Name=\"CustomColor8\",Association=GlobalParameter,Index=-1),ParameterValue=(R=0.135000,G=0.128854,B=0.128854,A=1.000000),ExpressionGUID=3E962B024BF8721CA0D17AA5B1E1C209)"
+    ]
+  },
+  "unreadable": {}
+}

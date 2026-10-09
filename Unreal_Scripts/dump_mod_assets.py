@@ -29,7 +29,7 @@ DUMP_DIR = Path(os.environ.get(
 SKIP_CLASSES = {
     "AnimSequence", "SkeletalMesh", "StaticMesh", "Skeleton", "Texture2D",
     "Material", "MaterialFunction", "CurveFloat", "CurveLinearColor", "CurveLinearColorAtlas",
-    "LevelSequence", "SoundWave", "UserDefinedEnum", "World",
+    "LevelSequence", "SoundWave", "UserDefinedEnum", "World", "ObjectRedirector",
 }
 
 eal = unreal.EditorAssetLibrary
