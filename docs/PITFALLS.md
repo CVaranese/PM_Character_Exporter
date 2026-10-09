@@ -29,16 +29,24 @@ found; don't delete fixed ones, mark them **Fixed** so the history stays.
   LogMaterial: Error: Compiler->Texture() failed to find texture 'T_Cha_ShieldOffset_M' in referenced list of size '2'
   Assertion failed: TextureReferenceIndex != INDEX_NONE [HLSLMaterialTranslator.cpp:8555]
   ```
-- **Cause (likely):** an engine bug in the kit update installed 2026-10-08 ~20:23–20:34 (binaries + base content, including
-  `MAT_Cha_Shield*`). Publishing copies referenced base-game assets into `PublishedAssets/References/`. While
-  saving or thumbnailing its copy of `MAT_Cha_ShieldGlow`, the material compiler can't match the copied texture.
-  The mod references it through the skin's shield visuals. The Oct 8 wipe happened at 20:56, right after the
-  update, so it was very likely the same crash.
+- **Cause (diagnosed 2026-10-09):** publishing copies every external (base-game) asset the mod references into
+  `PublishedAssets/References/` and points the copies at each other. For the shield chain it gets this wrong:
+  1. Chain: `Skin_<Char>_Default.shield_mesh` → `SK_Cha_Shield` → `MI_Cha_ShieldGlow/Stun` (+ `MI_Zet_DefaultShieldElement/Glass`,
+     also referenced by `SK_Cha_Shield`) → `MAT_Cha_ShieldGlow/Stun/Glass/Shield_Element` → material function
+     `MF_Cha_Shield_VertexOffsetShake` → texture `T_Cha_ShieldOffset_M` (sampled **inside the function**).
+  2. Log order: the MF is duplicated (17:44:40.477) **before** the texture (40.485), and the MAT after both (40.702).
+  3. The MF copy keeps pointing at the **original** `/Game/.../T_Cha_ShieldOffset_M`. Verified in the Oct 8 copies.
+     The MAT copy's cached referenced-texture list points at the **copied** texture.
+  4. Re-saving the MAT copy compiles it for the thumbnail. The compiler finds a texture with the right name but the
+     wrong object (`failed to find texture 'T_Cha_ShieldOffset_M' in referenced list`), and asserts.
+  - Affects **every character mod using the template's default shield mesh**, not just Falcon. It started with
+    the kit update installed 2026-10-08 ~20:23–20:34. The Oct 8 wipe (20:56) was very likely the same crash.
 - **Recovery:** this time `Saved/ModPublishBackup` was complete (413 files). Restore from it or from the
   `rivals-2-falcon` backup repo, and delete `PublishedAssets/`.
-- **Fix:** none yet. Don't publish until resolved. Ideas: report to the R2 workshop devs with the log excerpt; test
-  whether a fresh template mod publishes; check what references the shield material (skin shield visuals) and
-  whether pointing it elsewhere avoids the copy.
+- **Fix:** devs are working on it (2026-10-09). Don't publish until resolved. Possible local workaround (untested): put
+  mod-local copies of the whole shield chain (SK, MIs, MATs, MF, textures; ~16 assets) in `UnrealAssets/Shield/`,
+  with the copies referencing each other, and point `Skin_Cap_Default.shield_mesh` at the local SK. Publish then
+  has nothing external to duplicate in that chain. It's the only reference into the chain from the mod.
 - **Status:** Crash verified 2026-10-09 (second occurrence).
 
 <a id="p-ue-1"></a>
