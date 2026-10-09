@@ -1,0 +1,10 @@
+{
+  "asset": "/Game/ModContent/3729910023/PublishedAssets/AMD_Captain",
+  "kind": "Blueprint CDO (AMD_Captain_C)",
+  "properties": {
+    "arcade_mode_stages": [],
+    "character_splash_image": null,
+    "victory_jingle": null
+  },
+  "unreadable": {}
+}

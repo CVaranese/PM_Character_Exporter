@@ -1,0 +1,12 @@
+{
+  "asset": "/Game/ModContent/3729910023/PublishedAssets/Skins/Default/Data/Cap_Victory_Default",
+  "kind": "RivalsVictorySequenceData",
+  "properties": {
+    "skeletal_mesh_effects": [],
+    "skin_animation_overrides": {},
+    "sound_events": [],
+    "victory_animation": "/Game/Characters/Workshop/AN_Wrk_Dummy_Idle.AN_Wrk_Dummy_Idle",
+    "victory_sequence": "/Game/Characters/Workshop/SQ_Wrk_Victory_Default.SQ_Wrk_Victory_Default"
+  },
+  "unreadable": {}
+}

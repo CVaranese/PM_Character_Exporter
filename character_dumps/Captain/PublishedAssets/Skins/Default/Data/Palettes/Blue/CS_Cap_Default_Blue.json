@@ -1,0 +1,41 @@
+{
+  "asset": "/Game/ModContent/3729910023/PublishedAssets/Skins/Default/Data/Palettes/Blue/CS_Cap_Default_Blue",
+  "kind": "Blueprint CDO (CS_Cap_Default_Blue_C)",
+  "properties": {
+    "animation_texture_overrides": {},
+    "article_material_overrides": {},
+    "base_color_palette": null,
+    "character_parent": "(AssetName=\"Mod_3729910023_Char_Cap\")",
+    "character_renderer_class_override": null,
+    "character_select_portrait": "/Game/ModContent/3729910023/PublishedAssets/Skins/Default/Data/Palettes/Blue/T_Cap_Default_Blue_CSP.T_Cap_Default_Blue_CSP",
+    "color_slot": "BLUE",
+    "elemental_palette": "/Game/ModContent/3729910023/PublishedAssets/Skins/Default/Data/Palettes/Blue/PE_Cap_Default_Blue.PE_Cap_Default_Blue_C",
+    "exclude_from_build": false,
+    "exclude_from_unlock_everything_in_build": false,
+    "excluder_parent": "(AssetName=\"\")",
+    "hud_icon_texture": null,
+    "icon": null,
+    "icon_brush": "(TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ColorUseRule=UseColor_Specified),DrawAs=Image,Tiling=NoTile,Mirroring=NoMirror,ImageType=NoImage,ImageSize=(X=32.000000,Y=32.000000),Margin=(Left=0.000000,Top=0.000000,Right=0.000000,Bottom=0.000000),ResourceObject=None,OutlineSettings=(CornerRadii=(X=0.000000,Y=0.000000,Z=0.000000,W=0.000000),Color=(SpecifiedColor=(R=0.000000,G=0.000000,B=0.000000,A=0.000000),ColorUseRule=UseColor_Specified),Width=0.000000,RoundingType=HalfHeightRadius,bUseBrushTransparency=False),UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=False),bIsDynamicallyLoaded=False,ResourceName=\"\")",
+    "large_icon": null,
+    "large_icon_brush": "(TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ColorUseRule=UseColor_Specified),DrawAs=Image,Tiling=NoTile,Mirroring=NoMirror,ImageType=NoImage,ImageSize=(X=32.000000,Y=32.000000),Margin=(Left=0.000000,Top=0.000000,Right=0.000000,Bottom=0.000000),ResourceObject=None,OutlineSettings=(CornerRadii=(X=0.000000,Y=0.000000,Z=0.000000,W=0.000000),Color=(SpecifiedColor=(R=0.000000,G=0.000000,B=0.000000,A=0.000000),ColorUseRule=UseColor_Specified),Width=0.000000,RoundingType=HalfHeightRadius,bUseBrushTransparency=False),UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=False),bIsDynamicallyLoaded=False,ResourceName=\"\")",
+    "material_overrides_by_slot_name": {},
+    "mesh_effect_definitions": {},
+    "name": "Blue",
+    "ownership_prerequisites": [],
+    "palette_color_out": [],
+    "parent_skin": "(AssetName=\"Mod_3729910023_Skin_Cap_Default\")",
+    "play_fab_item_id": "",
+    "procedural_palette_slot_names": {},
+    "rarity": "COMMON",
+    "required_patreon_tier": "NONE_0",
+    "skin_color_palette": "/Game/ModContent/3729910023/PublishedAssets/Skins/Default/Data/Palettes/Blue/PS_Cap_Default_Blue.PS_Cap_Default_Blue_C",
+    "stock_icon_material_override": null,
+    "tags": []
+  },
+  "unreadable": {
+    "character_parent_class": "RivalsColorSlotData: Property 'character_parent_class' on 'CS_Cap_Default_Blue_C' is deprecated: Use CharacterParent instead.",
+    "excluder_parent_class": "RivalsColorSlotData: Property 'excluder_parent_class' on 'CS_Cap_Default_Blue_C' is deprecated: Use ExcluderParent instead.",
+    "ownership_pre_req_classes": "RivalsColorSlotData: Property 'ownership_pre_req_classes' on 'CS_Cap_Default_Blue_C' is deprecated: Use OwnershipPrerequisites instead.",
+    "parent_skin_class": "RivalsColorSlotData: Property 'parent_skin_class' on 'CS_Cap_Default_Blue_C' is deprecated: Use ParentSkin instead."
+  }
+}

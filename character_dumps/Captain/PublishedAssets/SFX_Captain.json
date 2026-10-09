@@ -1,0 +1,10 @@
+{
+  "asset": "/Game/ModContent/3729910023/PublishedAssets/SFX_Captain",
+  "kind": "Blueprint CDO (SFX_Captain_C)",
+  "properties": {
+    "associated_banks": [],
+    "sfx_category": "Captain",
+    "sound_effect_data": {}
+  },
+  "unreadable": {}
+}
