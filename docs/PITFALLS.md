@@ -21,7 +21,7 @@ found; don't delete fixed ones, mark them **Fixed** so the history stays.
 - **Status:** Verified (happened 2026-10-08). Backup script added 2026-10-09.
 
 <a id="p-ue-12"></a>
-### P-UE-12 — Publish crashes after the Oct 8 2026 R2Kit update (shield material assert)  ❗ Open
+### P-UE-12 — Publish crashes after the Oct 8 2026 R2Kit update (shield material assert)  ⚠️ Worked around (devs fixing)
 - **Symptom:** the editor crashes mid-publish and the mod is left in the published layout (see P-UE-0).
 - **Log** (`Project/Saved/Logs/Rivals2.log`):
   ```
