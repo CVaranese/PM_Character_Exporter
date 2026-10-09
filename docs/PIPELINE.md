@@ -184,7 +184,8 @@ properties from the stage 4–6 data. First check: can Python set these struct p
    python Unreal_Scripts/backup_mod.py -m "before publish"
    ```
    - Mirrors `UnrealAssets/`, `Scripts/` and `ModId.json` into the mod's own backup repo
-     (`D:\git_repos\R2_Captain_Falcon`, folder `mod/`), commits, and pushes if a remote is set.
+     (`D:\git_repos\R2_Captain_Falcon`, folder `mod/`), commits, and pushes to
+     <https://github.com/CVaranese/rivals-2-falcon> (**public**).
    - With R2Kit **closed** it also dumps every data asset to JSON in `data/`. With R2Kit open the dump is
      skipped and only the binary files are committed, so close R2Kit for a full backup.
    - Refuses to run if the mod looks wiped (empty `UnrealAssets`, a leftover `PublishedAssets`, or fewer
