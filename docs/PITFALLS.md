@@ -60,6 +60,27 @@ found; don't delete fixed ones, mark them **Fixed** so the history stays.
   reference `/Game/Characters/Shared/Shield/`. Backup `d20ef1c`. **Publish succeeded 2026-10-09** (no assert; kit restored UnrealAssets, 415 files). Post-publish backup `85476bf`.
 - **Status:** Crash verified 2026-10-09 (second occurrence).
 
+<a id="p-ue-13"></a>
+### P-UE-13 — No hurtbox: `CD_.hurtboxes_physics_asset` not set
+- **Symptom:** the character can't be hit.
+- **Cause:** `CD_Captain.hurtboxes_physics_asset` was `None` (already true in the Oct 8 data). `HB_Captain` existed
+  but nothing pointed at it.
+- **Fix:** set it to the `HB_` asset (`Unreal_Scripts/set_character_props.py`). Also check `HB_` coverage: Falcon's
+  only has bodies on `HipN` and `BustN`. Expand it to arms/legs/head (capsules only, P-UE-3).
+- **Status:** Fixed 2026-10-09 (pending playtest).
+
+<a id="p-ue-14"></a>
+### P-UE-14 — Template bone names left in `CD_` (camera tracks the wrong point)
+- **Symptom:** on ledge, the camera zooms toward the middle of the stage.
+- **Cause (likely):** `center_of_gravity_bone_name = Root_M`, `head_bone_name = Head_M`, `chest_bone_name = Chest_M`
+  are template defaults. **None exist in a Brawl skeleton**, so anything locating those bones (camera, UI, effects)
+  gets a bogus position.
+- **Fix:** Brawl equivalents: COG → `HipN`, head → `HeadN`, chest → `BustN`. `grab_bone_name = Grab_M` exists because
+  of the `ThrowN` → `Grab_M` rename (P-MODEL-1). Socket names (`ItemSocket`, `BeehiveSocket`, `PoppySocket`,
+  `ZappedSocket`) are probably missing too, which matters for items and status effects. **Check every `*_bone_name` /
+  `*_socket_name` in `CD_` against the skeleton** when porting.
+- **Status:** Fixed 2026-10-09 (pending playtest).
+
 <a id="p-ue-1"></a>
 ### P-UE-1 — Mesh import settings
 - **Symptom:** only a skeleton is created / mesh fails to import / capsule shadow errors.
