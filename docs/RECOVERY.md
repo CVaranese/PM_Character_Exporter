@@ -52,7 +52,8 @@ Moving the files on disk isn't enough: the paths inside each `.uasset` would sti
    (`References/Game/VFX/Textures/Noise/T_Veronoi_02_G`) couldn't be deleted by the editor, probably because
    the engine loads it at startup. The publish docs say to delete this folder before publishing anyway.
 8. ☐ Playtest.
-9. ☐ Set up a backup of `UnrealAssets/` we control before the next publish ([P-UE-0](PITFALLS.md#p-ue-0)).
+9. ✅ Leftover folder deleted; playtest works (unfinished character, as expected).
+10. ✅ Backup repo `R2_Captain_Falcon` + `backup_mod.py` set up; first backup committed 2026-10-09.
 
 ## Lessons
 

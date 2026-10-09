@@ -14,11 +14,11 @@ found; don't delete fixed ones, mark them **Fixed** so the history stays.
 - **Cause:** publishing moves assets into `PublishedAssets/`, rewrites their internal paths and then cleans up.
   The kit's backup (`Project/Saved/ModPublishBackup`) is supposed to restore them, but ours only held
   `SteamPreview.uasset`, and each publish overwrites it.
-- **Fix:** back up `UnrealAssets/` **outside the R2Kit folder** before every publish (copy or zip it, or
-  commit it to a git repo we control). The kit's version-control button commits `PublishedAssets/`, which is
-  what saved us; see [RECOVERY.md](RECOVERY.md). Restored files keep `/PublishedAssets/` paths, so a
-  restore needs extra editor steps.
-- **Status:** Verified (happened 2026-10-08).
+- **Fix:** run `Unreal_Scripts/backup_mod.py` before every publish. It commits the mod to our own repo
+  (`R2_Captain_Falcon`) outside the R2Kit folder; see PIPELINE stage 8. Don't count on the kit's
+  version-control button: if pressed at the wrong time it commits `PublishedAssets/` with rewritten paths
+  (that's what saved us, but restoring took extra editor steps; see [RECOVERY.md](RECOVERY.md)).
+- **Status:** Verified (happened 2026-10-08). Backup script added 2026-10-09.
 
 <a id="p-ue-1"></a>
 ### P-UE-1 — Mesh import settings

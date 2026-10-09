@@ -179,6 +179,20 @@ properties from the stage 4–6 data. First check: can Python set these struct p
 ## 8. Playtest → back up → publish
 
 1. Playtest from the Modding UI.
-2. **Back up `UnrealAssets` outside the kit before every publish** ([P-UE-0](PITFALLS.md#p-ue-0)).
+2. **Back up before every publish** ([P-UE-0](PITFALLS.md#p-ue-0)):
+   ```bash
+   python Unreal_Scripts/backup_mod.py -m "before publish"
+   ```
+   - Mirrors `UnrealAssets/`, `Scripts/` and `ModId.json` into the mod's own backup repo
+     (`D:\git_repos\R2_Captain_Falcon`, folder `mod/`), commits, and pushes if a remote is set.
+   - With R2Kit **closed** it also dumps every data asset to JSON in `data/`. With R2Kit open the dump is
+     skipped and only the binary files are committed, so close R2Kit for a full backup.
+   - Refuses to run if the mod looks wiped (empty `UnrealAssets`, a leftover `PublishedAssets`, or fewer
+     than half the assets of the last backup), so a broken state never becomes the "latest" backup.
+     `--force` overrides.
+   - For a new character, create its backup repo first (`git init`, copy the README/.gitattributes
+     from `R2_Captain_Falcon`), then pass `--mod-id` and `--backup-repo`.
 3. Publish with the Publish button only. Never cook separately, and never close the editor or terminal window
    mid-publish.
+4. After publishing, check that `UnrealAssets/` still has everything (or just run the backup again; its
+   safety check catches a wipe). If it was wiped, restore from the backup repo (see its README).

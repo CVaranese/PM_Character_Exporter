@@ -13,7 +13,7 @@ Last updated 2026-10-09.
 | 5 Attributes | Manual | Auto from mapping table | Dump restored CD_ (P-ATTR-1) |
 | 6 Movement fitting | Script per anim | Auto for all TransN anims | Generalise `fit_transn.py` |
 | 7 Unreal import/setup | Manual paste | Editor Python script | Prove Python can write CD_/ATT_ struct props |
-| 8 Backup/publish | Manual | Script backup before publish | P-UE-0 |
+| 8 Backup/publish | Script (`backup_mod.py`) | Done | GitHub remote for `R2_Captain_Falcon` pending |
 
 ## Feature status (Falcon)
 
@@ -52,6 +52,6 @@ Last updated 2026-10-09.
 - [x] Where were the PM move scripts copied from? → Rukai Data subaction pages (see SOURCES.md). Next:
       scrape them per move, or use brawllib_rs directly, to remove the copy/paste step.
 - [ ] 10.33 vs 10.666 scale (P-SCALE-1)
-- [ ] Modded-character repo: the kit's own git button manages `.git` in the mod folder. Do we also put our
-      own repo there (conflict risk), or keep a separate repo that mirrors `UnrealAssets` + text dumps?
+- [x] Modded-character repo: a separate repo (`D:\git_repos\R2_Captain_Falcon`) mirrors the mod and its
+      JSON dump. The kit's `.git` in the mod folder is left alone.
 - [ ] Which BrawlCrate / Import-BrawlBox-Animation plugin versions are in use (record for reproducibility)
