@@ -47,6 +47,8 @@ Automation levels: **Manual** · **Script** (run by hand) · **Auto** (part of a
    for stage 4.
 
 **Automation: Manual + Script.** BrawlCrate plugins run inside the BrawlCrate GUI.
+Move scripts are copied by hand from Rukai Data. Planned replacement: read the `.pac` files directly
+([STATUS FE-1](STATUS.md#future-enhancements)).
 **Target:** check whether BrawlCrate can run plugins headless. Otherwise this stays a single manual "export
 everything" click per character.
 
